@@ -1,0 +1,14 @@
+BEGIN
+ INPUT a,b,c
+ IF a>b
+   IF a>c
+      Display "a la gia tri lon nhat"
+   ELSE
+      Display "c la gia tri lon nhat"
+   END IF
+ ELSE
+   IF b>c
+      Display "b la gia tri lon nhat"
+   END IF
+ END IF
+END

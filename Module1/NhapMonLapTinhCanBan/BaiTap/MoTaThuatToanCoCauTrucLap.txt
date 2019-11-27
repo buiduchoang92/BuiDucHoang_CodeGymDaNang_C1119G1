@@ -1,0 +1,13 @@
+BEGIN
+ INPUT n va day a1,a2,...,ai
+       Max=a1,i=2
+ IF i>n
+      display"Dua ra gia tri Max va ket thuc"
+ ELSE
+   WHILE ai>Max
+   DO
+        display"Max=ai"
+        i=i+1
+   END DO
+ END IF
+AND
