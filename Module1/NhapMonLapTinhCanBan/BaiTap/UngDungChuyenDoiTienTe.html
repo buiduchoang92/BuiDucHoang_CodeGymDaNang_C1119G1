@@ -5,25 +5,36 @@
     <title>HoangPro</title>
 </head>
 <body>
-<form>
-    Amount
-        <input type="text" name="user_id" size="10" id="id1" />
+    Amount <input type="text" size="10" id="inter" />
     From Currency
-    <select name="dropdown" id="ad2">
-        <option value="Maths" selected>VND</option>
-        <option value="Physics">USD</option>
+    <select id="manu">
+        <option value="Dong">VND</option>
+        <option value="DoLa">USD</option>
     </select>
     To Currency
-    <select name="dropdown" id="ad3">
-        <option value="Maths" selected>USD</option>
-        <option value="Maths" selected>VND</option>
+    <select id="mancity">
+        <option value="Dola">USD</option>
+        <option value="Dong">VND</option>
     </select>
-</form>
+    <button onclick="convert()">Convert</button><br>
 <script>
-    let id1 = document.getElementById("iđ1").value;
-    let ad2 = document.getElementById("ad2").value;
-    let ad3 = document.getElementById("ad3").value;
-    USD = VND*23000
+    var inter = document.getElementById("inter");
+    var manu = document.getElementById("manu");
+    var mancity = document.getElementById("mancity");
+    var supbot;
+    function convert() {
+        if (manu.value === "Dong" && mancity.value === "Dola") {
+            supbot = inter.value / 23000;
+        } else if (manu.value === "Dola" && mancity.value === "Dong") {
+            supbot = inter.value * 23000;
+        }
+        else {
+            supbot = "khong co gia tri";
+        }
+        alert(supbot);
+    }
+
+
 
 </script>
 </body>
