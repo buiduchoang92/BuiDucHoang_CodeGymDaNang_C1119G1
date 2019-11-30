@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Amount <input type="text" size="10" id="inter" />
+From Currency
+<select id="manu">
+    <option value="Dong">VND</option>
+    <option value="DoLa">USD</option>
+</select>
+To Currency
+<select id="mancity">
+    <option value="Dong">VND</option>
+    <option value="DoLa">USD</option>
+</select>
+<button onclick="convert()">Convert</button><br>
+<script>
+    var inter = document.getElementById("inter");
+    var manu = document.getElementById("manu");
+    var mancity = document.getElementById("mancity");
+    var supbot;
+    function convert() {
+        if (manu.value === "Dong" && mancity.value === "DoLa") {
+            supbot = inter.value / 23000;
+        } else if (manu.value === "DoLa" && mancity.value === "Dong") {
+            supbot = inter.value * 23000;
+        }
+        else {
+            supbot = "khong co gia tri";
+        }
+        alert(supbot);
+    }
+
+</script>
+</body>
+</html>

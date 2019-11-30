@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var tenNhap = prompt("nhap ten nguoi dung :");
+    if (tenNhap == "AdMin") {
+        let passwood = tenNhap = prompt("nhap passwood :");
+        if (passwood == "TheMaster") {
+            alert("wellcome");
+        } else {
+            if (passwood == "null") {
+                alert("Canceled");
+            } else {
+                alert("Wrongpasswood");
+            }
+        }
+    } else if (tenNhap=="null") {
+        alert("canceld");
+    }
+    else {
+        alert("i don't know you");
+
+    }
+</script>
+</body>
+</html>
