@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name = prompt("Enter name Cutomer :");
+    var idcard = prompt("Enter ID card Cutomer :");
+    var birthday = prompt("Enter date of birth Cutomer :");
+    var email = prompt("Enter email Cutomer :");
+    var address = prompt("Enter address Cutomer :");
+    var cutomertype = prompt("Enter Cutomer type :");
+    var discount = prompt("Enter discount :");
+    var amount = prompt("Enter amount :");
+    var rentdays = prompt("Enter rentdays :");
+    var roomtype = prompt("Enter room type");
+    var totalPays;
+    var Villa = 500, House = 300, Room = 100;
+    if (roomtype === "Villa") {
+        roomtype = Villa;
+    } else if (roomtype === "House") {
+        roomtype = House;
+    } else {
+        roomtype = Room;
+    }
+    totalPays = roomtype * rentdays * (1 - (discount / 100));
+    alert("name :" + name + "\nidcard :" + idcard + "\nbirthday :" + birthday + "\nemail :" + email + "\naddress :" + address + "\ncutomertype :"
+        + cutomertype + "\ndiscount :" + discount + "\namount :" + amount + "\nrentdays :" + rentdays + "\nroomtype :"
+        + roomtype + "\ntootalPay :" + totalPays);
+
+</script>
+</body>
+</html>

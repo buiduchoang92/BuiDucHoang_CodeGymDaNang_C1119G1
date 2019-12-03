@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id1">
+<button onclick="X()">tinh so ngay</button>
+<br>
+<input type="text" id="id2">
+<button onclick="X2()">tinh so ngay</button>
+<div id="id3"></div>
+<div id="id4"></div>
+<script>
+    function X() {
+        var a = document.getElementById("id1");
+        switch (a.value) {
+            case "4" :
+            case "6" :
+            case "8" :
+            case "10" :
+            case "12" :
+                document.getElementById("id3").innerText = "thang" + a.value + "co 30 ngay";
+                break;
+            case "1" :
+            case "5" :
+            case "3" :
+            case "7" :
+            case "9" :
+            case "11" :
+                document.getElementById("id3").innerText = "thang" + a.value + "co 31 ngay";
+                break;
+            case "2":
+                document.getElementById("id3").innerText = "thang" + a.value +  "co 28 ngay";
+                break;
+            default :
+                document.getElementById("id3").innerText = "ko co thang " + a.value;
+
+        }
+    }
+    function X2() {
+        let b = document.getElementById("id2");
+        switch (b.value) {
+            case "4" :
+            case "6" :
+            case "8" :
+            case "10" :
+            case "12" :
+                document.getElementById("id4").innerText = "thang" + b.value + "co 30 ngay";
+                break;
+            case "1" :
+            case "5" :
+            case "3" :
+            case "7" :
+            case "9" :
+            case "11" :
+                document.getElementById("id4").innerText = "thang" + b.value + "co 31 ngay";
+                break;
+            case "2":
+                document.getElementById("id4").innerText = "thang" + b.value +  "co 28 ngay";
+                break;
+            default :
+                document.getElementById("id4").innerText = "ko co thang " + b.value;
+
+        }
+
+    }
+</script>
+</body>
+</html>

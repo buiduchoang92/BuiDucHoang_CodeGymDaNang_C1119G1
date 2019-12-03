@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var nameCustomer = "Bui Duc Hoang";
+    var idcard = "197306621";
+    var dayOfBirth = "25/10/1992";
+    var email = "hoang92duc@gmail.com";
+    var address = "Da Nang";
+    var typeMember = "Diamond";
+    var discount = "10";
+    var amount = "2";
+    var rentDays = "7";
+    var typeRoom = "Villa";
+    var typeOfRoom = "Vip"
+    var totalPays;
+    if (typeRoom === "Villa") {
+        totalPays = 500 * rentDays * (1 - discount / 100);
+    } else if (typeRoom === "House") {
+        totalPays = 300 * rentDays * (1 - discount / 100);
+    } else {
+        totalPays = 100 * rentDays * (1 - discount / 100);
+    }
+    //giam gia theo dia chi
+    if (address === "Da Nang") {
+        totalPays -= 20;
+    } else if (address === "Hue") {
+        totalPays -= 10;
+    } else {
+        totalPays -= 5;
+    }
+    //giam gia theo thoi gian luu tu
+    if (rentDays > 7) {
+        totalPays -= 30;
+    } else if (rentDays >= 5) {
+        totalPays -= 20;
+    } else {
+        totalPays -= 10;
+    }
+    //giam gia theo loai member
+    typeMember == "Diamond" ? totalPays -= 15 : typeMember == "Platium" ? totalPays -= 10 : typeMember == "Gold" ? totalPays -= 5 : typeMember == "Silver" ?
+        totalPays -= 2 : totalPays -= 0;
+    //giam gia theo tuoi va dia chi
+    let currentYear = new Date().getFullYear();
+    let birthday = new Date(dayOfBirth).getFullYear();
+    let ageCustomer = currentYear - birthday;
+    if (ageCustomer > 30 && address === "Da Nang")
+        totalPays -= 2;
+    else if (ageCustomer > 20 && address === "Da Nang")
+        totalPays -= 1;
+    num = prompt("1 : Show infomation :" + "\n2 : Edit infomation" + "\n3 :Show the amount to be pay afer discount");
+    switch (num) {
+        case "1" :
+            alert("name :" + nameCustomer + "\nidCard :" + idcard + "\ndayOfbirth :" + dayOfBirth + "\nemail :" + email + "\naddress :" + address +
+                "typeMember :" + typeMember + "\ndiscount :" + discount + "\namount :" + amount + "rentDays :" + rentDays + "\ntypeRoom :" + typeRoom +
+                "\ntypeOfRoom :" + typeRoom + "\ntotalPays :" + totalPays);
+            break;
+        case "2" :
+            let edit = prompt("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+
+            switch (edit) {
+                case "1" :
+                    let stems = prompt("Update name :" + nameCustomer);
+                    nameCustomer = stems;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case  "2" :
+                    let stems1 = prompt("Update idcard :" + idcard);
+                    idcard = stems1
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "3" :
+                    let stems2 = prompt("Update dayOfBirth :"+dayOfBirth);
+                    dayOfBirth = stems2;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "4" :
+                    let stems3 = prompt("Update email :"+email);
+                    email = stems3;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "5" :
+                    let stems4 = prompt("Update address :"+address);
+                    address = stems4;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "6" :
+                    let stems5 = prompt("Update typeMember :"+typeMember);
+                    typeMember = stems5;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "7" :
+                    let stems6 =prompt("Update discount :"+discount);
+                    discount = stems6;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case  "8" :
+                    let stems7 = prompt("Update amount :"+amount);
+                    amount = stems7;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "9" :
+                    let stems8 = prompt("Update rentDays :"+rentDays);
+                    rentDays = stems8;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                case "10" :
+                    let stems9 = prompt("Update typeRoom :"+typeRoom);
+                    typeRoom = stems9;
+                    alert("1.name :" + nameCustomer + "\n2.idCard :" + idcard + "\n3.dayOfbirth :" + dayOfBirth + "\n4.email :" + email + "\n5.address :" + address +
+                        "6.typeMember :" + typeMember + "\n7.discount :" + discount + "\n8.amount :" + amount + "9.rentDays :" + rentDays + "\n10.typeRoom :" + typeRoom +
+                        "\n11.typeOfRoom :" + typeRoom + "\n12.totalPays :" + totalPays);
+                    break;
+                default :
+                    alert("Failed");
+            }
+        case "3" :
+            alert("Total money you must pay : "+totalPays);
+        break;
+        default :
+            alert("Failed");
+    }
+
+</script>
+</body>
+</html>
