@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var checkValidate = false;
+    var email;
+    var birthday;
+    var idcard;
+    var discount;
+    var numberOfAccompanying;
+    var rentdays;
+    var nameText = "";
+    // var name = prompt("Enter name Cutomer :");
+    // var address = prompt("Enter address Cutomer :");
+    // var addressText = "";
+    // var cutomertype = prompt("Enter Cutomer type :");
+    // var cutomerTypeText = "";
+    // cutomertype = cutomertype.trim().toLocaleLowerCase();
+    // for (let i = 0; i < cutomertype.length; i++) {
+    //     if (cutomertype.charAt(i) === " " && cutomertype.charAt(i + 1) === " ") {
+    //         continue;
+    //     }
+    //     if (i === 0 || cutomertype.charAt(i - 1) === " ") {
+    //         cutomerTypeText += cutomertype.charAt(i).toLocaleUpperCase();
+    //         continue;
+    //     }
+    //     cutomerTypeText += cutomertype.charAt(i);
+    // }
+    // cutomertype = cutomerTypeText
+    // address = address.trim().toLocaleLowerCase();
+    // for (let i = 0; i < address.length; i++) {
+    //     if (address.charAt(i) === " " && address.charAt(i + 1) === " ") {
+    //         continue;
+    //     }
+    //     if (i === 0 || address.charAt(i - 1) === " ") {
+    //         addressText += address.charAt(i).toLocaleUpperCase();
+    //         continue;
+    //     }
+    //     addressText += address.charAt(i);
+    // }
+    // address = addressText;
+    // name = name.trim().toLocaleLowerCase();
+    // for (let i = 0; i < name.length; i++) {
+    //     if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+    //         continue;
+    //     }
+    //     if (i === 0 || name.charAt(i - 1) === " ") {
+    //         nameText += name.charAt(i).toLocaleUpperCase();
+    //         continue;
+    //     }
+    //     nameText += name.charAt(i);
+    // }
+    // name = nameText;
+    // do {
+    //     checkValidate = false;
+    //     rentdays = prompt("Enter rentdays :");
+    //     if (!isNaN(rentdays)) {
+    //         rentdays = parseFloat(rentdays);
+    //         if (rentdays > 0 && Number.isInteger(rentdays)) {
+    //             checkValidate = true;
+    //         }
+    //     }
+    //     if (!checkValidate) {
+    //         alert("Renday is Invalid!! Please try Again :");
+    //     }
+    // } while (!checkValidate);
+    //
+    // do {
+    //     checkValidate = false;
+    //     discount = prompt("Enter discount :");
+    //     if (!isNaN(discount)) {
+    //         discount = Number.parseFloat(discount);
+    //         if (discount >= 0) {
+    //             checkValidate = true;
+    //         }
+    //     }
+    //     if (!checkValidate) {
+    //         alert("Discount is Invalid,Please try Again :");
+    //     }
+    // } while (!checkValidate);
+    // do {
+    //     checkValidate = false;
+    //     numberOfAccompanying = prompt("Enter Number Of Accompanying :");
+    //     if (!isNaN(numberOfAccompanying)) {
+    //         numberOfAccompanying = Number.parseFloat(numberOfAccompanying);
+    //         if (numberOfAccompanying >= 0 && Number.isInteger(numberOfAccompanying)) {
+    //             checkValidate = true;
+    //         }
+    //     }
+    //     if (!checkValidate) {
+    //         alert("NumberOfAccompanying is Invalid!!! please try Again :");
+    //     }
+    // } while (!checkValidate);
+    //
+    // do {
+    //     checkValidate = false;
+    //     idcard = prompt("Enter ID card Cutomer :");
+    //     if (isNaN(idcard)) {
+    //         alert("idcard is Invalid, Please try Again:");
+    //         continue;
+    //     }
+    //     idcard = Number.parseFloat(idcard);
+    //     if (!Number.isInteger(idcard)) {
+    //         alert("idcard is Invalid, Please try Again :");
+    //         continue;
+    //     }
+    //     if (idcard >= 100000000 && idcard <= 999999999) {
+    //         checkValidate = true;
+    //     }
+    // } while (!checkValidate);
+    //
+    // do {
+    //     checkValidate = false;
+    //     birthday = prompt("Enter date of birth Cutomer (dd/XX/YYYY):");
+    //     if (birthday.charAt(2) !== "/" || birthday.charAt(5) !== "/") {
+    //         alert("Brithday is invalid !!! Please try Again :");
+    //         continue;
+    //     }
+    //     let day = birthday.substring(0, 2);
+    //     let mouth = birthday.substring(3, 5);
+    //     let year = birthday.substring(6, 10);
+    //     if (!isNaN(day) && !isNaN(mouth) && !isNaN(year)) {
+    //         day = Number.parseFloat(day);
+    //         mouth = Number.parseFloat(mouth);
+    //         year = Number.parseFloat(year);
+    //         if (Number.isInteger(day) && Number.isInteger(mouth) && Number.isInteger(year)) {
+    //             if (day > 0 && day < 32 && mouth > 0 && mouth < 13 && year > 1955 && year < 2019) {
+    //                 checkValidate = true;
+    //             }
+    //         }
+    //     }
+    //     if (!checkValidate) {
+    //         alert("Brithday is invalid !!! Please try Again :");
+    //     }
+    // } while (!checkValidate);
+
+    do {
+        checkValidate = true;
+        email = prompt("Enter email Customer :");
+        let countDoc = 0;
+        let countAt = 0;
+        for (i = 0; i < email.length; i++) {
+            if (email.charAt(i) === "@") {
+                countAt++;
+            }
+            if (email.charAt(i) === ".") {
+                countDoc++;
+            if (email.charAt(i+1)=== " "||email.charAt(i)==="email.length") {
+                checkValidate = false;
+                alert("Email is Invalid !!! Please try Again");
+            }
+            }
+        }
+        if (countAt !== 1 || countDoc < 1) {
+            checkValidate = false;
+            alert("Email is Invalid !!! Please try Again");
+        }
+
+    } while (!checkValidate);
+
+
+    // var amount = prompt("Enter amount :");
+    // var roomtype = prompt("Enter room type");
+    // var totalPays;
+    // var Villa = 500, House = 300, Room = 100;
+    // if (roomtype === "Villa") {
+    //     roomtype = Villa;
+    // } else if (roomtype === "House") {
+    //     roomtype = House;
+    // } else {
+    //     roomtype = Room;
+    // }
+    // totalPays = roomtype * rentdays * (1 - (discount / 100));
+    alert("name :" + name +
+        "\nidcard :" + idcard +
+        "\nbirthday :" + birthday +
+        "\nemail :" + email +
+        "\naddress :" + address +
+        "\ncutomertype :" + cutomertype +
+        "\ndiscount :" + discount +
+        // "\namount :" + amount +
+        "\nrentdays :" + rentdays +
+        "\nnumberofaccompaniing :" + numberOfAccompanying
+        // "\nroomtype :" + roomtype +
+        // "\ntootalPay :" + totalPays);
+    )
+
+</script>
+</body>
+</html>

@@ -5,61 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    //In len man hinh tu 1 den 10
-    // Biet truoc so lan lap -> cú pháp for
-    // for (var i = 0; i < 10; i++) {
-    //     // if (i == 4) {
-    //     //     break;
-    //     // }
-    //     // var k = i + 1;
-    //     document.write(i++ + " ");
-    //     //0 1 2 3 4
-    //     //1 3 5 7 9
-    //     //1 3 5 7 9 11 13 15
-    //     //0 2 4 6 8
-    //     //
-    //
-    // }
-
-    // Su dung cu phap while
-    // Truong hop minh khong biet truoc so lan lap
-    // Gia su co 1 mat khau abcd1234. Nguoi dung nhap vao
-    // Neu nhap dung thi thong bao: da nhap dung
-    // var matKhauCSDL = "abcd1234";
-    // var nhapMatKhau = prompt("Nhap mat khau:");
-    // while (nhapMatKhau != matKhauCSDL) {
-    //     nhapMatKhau = prompt("Nhap mat khau:");
-    // }
-    // do {
-    //     var nhapMatKhau = prompt("Nhap mat khau:");
-    // } while (nhapMatKhau != matKhauCSDL);
-    //
-    // alert("BAN DA NHAP DUNG MAT KHAU");
-
-    // for (var i = 1, j = 10; i <= 10,j>=5; i++, j--) {
-    //     var sum = i + j;
-    //     document.write(i + " + " + j + " = " + sum + "<br>");
-    // }
-
-
-    for (var i = 0; i < 5; i++){
-        for (var j = 0; j < 10; j++){
-            document.write("*");
+<script language="javascript">
+    let sout, i, j;
+    sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+    i = j = 1;
+    while (i <= 10) {
+        sout = sout + "<tr>";
+        while (j <= 10) {
+            sout = sout + "<td>" + i * j + "</td>";
+            j++;
         }
-        document.write("<br>");
+        sout = sout + "</tr>";
+        j = 1;
+        i++;
     }
-    for (var i = 0; i < 5; i++) {
-        for (var j = 0; j < 10; j++) {
-
-        }
-    }
-    for (var i = 0; i < 5; i++) {
-        for (var j = 0; j < 5; i++) {
-            document.write("*");
-        }
-        document.write("<br>");
-    }
+    sout = sout + "</table>";
+    document.write(sout);
 </script>
 </body>
 </html>

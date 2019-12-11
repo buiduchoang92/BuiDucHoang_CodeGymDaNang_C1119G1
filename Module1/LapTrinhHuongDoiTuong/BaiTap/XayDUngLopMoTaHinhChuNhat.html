@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"/>
+<script>
+
+    let Rectangle = function (chieuDai,chieuRong) {
+        this.chieuDai = chieuDai;
+        this.chieuRong = chieuRong;
+        this.getchieuDai = function (chieuDai) {
+            return this.chieuDai
+        }
+        this.getchieuRong = function (chieuRong) {
+            return this.chieuRong
+        }
+        this.getdienTich = function () {
+            return this.chieuDai * this.chieuRong;
+        }
+        this.getchuVi = function () {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+        this.setchieuDai = function (chieuDai) {
+            this.chieuDai = chieuDai;
+        }
+        this.setchieuRong = function (chieuRong) {
+            this.chieuRong = chieuRong;
+        }
+    }
+    function createRectangle(){
+        var ctx = document.getElementById("myCanvas").getContext("2d");
+        var rectangle = new Rectangle(200,300);
+        ctx.beginPath();
+        ctx.rect(20,20,rectangle.chieuDai, rectangle.chieuRong);
+        ctx.fill();
+    }
+    createRectangle();
+    let rectangle = new Rectangle(200,300);
+    rectangle.setchieuDai(100);
+    rectangle.setchieuRong(200);
+    let chieuDai = rectangle.getchieuDai();
+    let chieuRong = rectangle.getchieuDai();
+    let dienTich = rectangle.getdienTich();
+    let chuVi  = rectangle.getchuVi();
+    alert("dientich" +dienTich + "chu vi :" + chuVi);
+
+</script>
+</body>
+</html>

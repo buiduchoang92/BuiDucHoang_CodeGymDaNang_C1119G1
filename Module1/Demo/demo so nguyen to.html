@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = prompt("Nhap so luong nguyen to muon in ra : ");
+    document.write(2 + " " + 3 + " ");
+    for (i = 2, j = 3; i < a; j += 2) {
+        let a = 0;
+        for (let q = 3; q <= Math.sqrt(j); q++) {
+            if (j % q == 0) {
+                a = 0;
+                break;
+            }
+            a=1;
+        }
+        if (a != 0) {
+            i++;
+            document.write(j + " ");
+        }
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bai1 Viet ham tinh binh phuong cua mot so duoc dua vao.goi ham vua xay dung duoc;
+    function bai1(x) {return x*x;}
+    //bai2 Viet ham tinh dien tich,ham tinh chu vi hinh tron,goi ham vua xay dung duoc;
+    function bai2(radius) {return "ban kinh :" + radius +"\nchu vi hinh tron" + radius*2*Math.PI+"\nDien tich hinh tron :"+
+            Math.pow(radius,2)*Math.PI;
+    }
+    //bai 3 Tinh giai thua cua mot so nguyen bat ky duoc dua vao;
+    function bai3(nhapso) {
+        let temp = 1;
+        nhapso = parseInt(nhapso);
+        if (nhapso === 1 || nhapso === 0){
+            return "giai thua" + nhapso + "la 1";
+        } else {
+            for (i=0 ; i>0;i--){
+                temp *= i;
+            } return temp;
+        }
+    }
+    //bai 4 Viet ham kiem tra xem ki tu nhap vao co phai la ki tu so hay khong
+    function bai4(inputNumber) {
+        if (!isNaN(inputNumber)) 
+    }
+</script>
+</body>
+</html>
