@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let choose = prompt(
+        "1.Add New Customer" +
+        "\n2.Delete Customer"
+    );
+    let arrNameCustomer = [];
+    switch (choose) {
+        case "1" :
+            let arrlenght = parseInt(prompt("So luong Customer Muon Them :"));
+            for (let i = 0; i < arrlenght; i++) {
+                let arrNameCustomer
+                array[i] = num + "\n";
+            }
+            array.sort();
+            let str = "";
+            for (let i = 0; i < amount; i++) {
+                str += i + "." + array[i].split(" , ");
+            }
+
+            alert("List Customer :" + "\n" + str);
+            break;
+        case "2" :
+            let listCustomer = ["Hoang", "\nHai", "\nKien", "\nHuy", "\nTuan", "\nDuc", "\nNgoc", "\nDang", "\nDiep", "\nNgoc"];
+            let deleteCustomer = parseInt(prompt(listCustomer));
+            for (i = 0; i < listCustomer.length; i++) {
+                if (deleteCustomer === i) {
+                    listCustomer.splice(i - 1, 1);
+                }
+            }
+            alert(listCustomer);
+        default :
+            alert("The Number Edit Is Not! Please Try Again!");
+    }
+</script>
+</body>
+</html>

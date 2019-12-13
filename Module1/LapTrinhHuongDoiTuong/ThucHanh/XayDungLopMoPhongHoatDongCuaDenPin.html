@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Battery() {
+        this.setEnergy = function (energy) {
+            this.energy = energy;
+        }
+        this.getEnergy = function () {
+            return this.energy;
+        }
+        this.decreaseEnergy = function () {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
+    }
+
+    function FlashLamp() {
+        this.setBattery = function (battery) {
+            this.battery = battery;
+        }
+        this.getBattery = function () {
+            return this.battery.getEnergy();
+        }
+        this.light = function () {
+            if (this.status) {
+                alert("Lighting");
+            } else {
+                alert("Not Lighting");
+            }
+        }
+        this.turnOn = function () {
+            this.status = true;
+        }
+        this.turnOff = function () {
+            this.status = false;
+        }
+    }
+
+    var battery = new Battery();
+    battery.setEnergy(10);
+    var flightLamp = new FlashLamp();
+    flightLamp.setBattery(battery);
+    document.write("Battery Infor :" + flightLamp.getBattery() + "<br/>");
+    flightLamp.light();
+    document.write("Turn On <br/>:");
+    flightLamp.turnOn();
+    flightLamp.light();
+    document.write("Battery Infor :" + flightLamp.getBattery() + "<br/>");
+    document.write("turn Off <br/>:");
+    flightLamp.turnOff();
+    flightLamp.light();
+
+</script>
+</body>
+</html>

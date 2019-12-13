@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arrListCustomers = [];
+    function addNewCustomer() {
+        let name = prompt("Enter name Cutomer :");
+        let idcard = prompt("Enter ID card Cutomer :");
+        let birthday = prompt("Enter date of birth Cutomer :");
+        let email = prompt("Enter email Cutomer :");
+        let address = prompt("Enter address Cutomer :");
+        let customertype = prompt("Enter Cutomer type :");
+        let discount = prompt("Enter discount :");
+        let amount = prompt("Enter amount :");
+        let rentdays = prompt("Enter rentdays :");
+        let roomtype = prompt("Enter room type");
+        arrListCustomers.push([name,idcard,birthday,email,address,customertype,discount,amount,rentdays,roomtype]);
+        // console.log(arrListCustomers);
+    }
+    function displayCustomer() {
+        let str = "";
+        for (i=0;i < arrListCustomers.length;i++){
+            str += "Customer" + i + "."  + "\n";
+            for (j=0;j < 2;j++){
+                str += j +"."+ arrListCustomers[i][j] + "\n";
+            }
+        }
+        return str;
+    }
+    function displayInfoemationCustomer(t) {
+        let str = "";
+        for (i=0;i < arrListCustomers[t].length;i++){
+            str += i + "." + arrListCustomers[t][i] + "\n";
+        }
+        return str;
+    }
+    function mainMenu() {
+        let choose = prompt(
+            "1.Add New Customer." +
+            "\n2.Display Information Customer." +
+            "\n3.Edit Information Customer." +
+            "\n4.Delete Customer." +
+            "\n5.Exit."
+        );
+        switch (choose) {
+            case "1":
+                addNewCustomer();
+                break;
+            case "2":
+                displayCustomer();
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+            case "5":
+                break;
+        }
+    }
+    mainMenu()
+</script>
+</body>
+</html>
