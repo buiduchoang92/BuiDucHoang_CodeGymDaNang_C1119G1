@@ -7,38 +7,8 @@
 <body>
 <script>
     var arrListCustomers = [];
-    function addNewCustomer() {
-        let name = prompt("Enter name Cutomer :");
-        let idcard = prompt("Enter ID card Cutomer :");
-        let birthday = prompt("Enter date of birth Cutomer :");
-        let email = prompt("Enter email Cutomer :");
-        let address = prompt("Enter address Cutomer :");
-        let customertype = prompt("Enter Cutomer type :");
-        let discount = prompt("Enter discount :");
-        let amount = prompt("Enter amount :");
-        let rentdays = prompt("Enter rentdays :");
-        let roomtype = prompt("Enter room type");
-        arrListCustomers.push([name,idcard,birthday,email,address,customertype,discount,amount,rentdays,roomtype]);
-        // console.log(arrListCustomers);
-    }
-    function displayCustomer() {
-        let str = "";
-        for (i=0;i < arrListCustomers.length;i++){
-            str += "Customer" + i + "."  + "\n";
-            for (j=0;j < 2;j++){
-                str += j +"."+ arrListCustomers[i][j] + "\n";
-            }
-        }
-        return str;
-    }
-    function displayInfoemationCustomer(t) {
-        let str = "";
-        for (i=0;i < arrListCustomers[t].length;i++){
-            str += i + "." + arrListCustomers[t][i] + "\n";
-        }
-        return str;
-    }
-    function mainMenu() {
+    var checkEdditCustomer = false;
+    function displayMainMenu() {
         let choose = prompt(
             "1.Add New Customer." +
             "\n2.Display Information Customer." +
@@ -54,14 +24,94 @@
                 displayCustomer();
                 break;
             case "3":
+                chooseCustomerEdit();
                 break;
             case "4":
                 break;
             case "5":
                 break;
         }
+        displayMainMenu();
     }
-    mainMenu()
+
+    function addNewCustomer() {
+        let arrInfor = [];
+        let name = prompt("Enter name Cutomer :");
+        let idcard = prompt("Enter ID card Cutomer :");
+        let birthday = prompt("Enter date of birth Cutomer :");
+        let email = prompt("Enter email Cutomer :");
+        let address = prompt("Enter address Cutomer :");
+        let customertype = prompt("Enter Cutomer type :");
+        let discount = prompt("Enter discount :");
+        let amount = prompt("Enter amount :");
+        let rentdays = prompt("Enter rentdays :");
+        let roomtype = prompt("Enter room type");
+        arrInfor.push(name);
+        arrInfor.push(idcard);
+        arrInfor.push(birthday);
+        arrInfor.push(email);
+        arrInfor.push(address);
+        arrInfor.push(customertype);
+        arrInfor.push(discount);
+        arrInfor.push(amount);
+        arrInfor.push(rentdays);
+        arrInfor.push(roomtype);
+        arrListCustomers.push(arrInfor);
+        displayMainMenu();
+        // arrListCustomers.push([name,idcard,birthday,email,address,customertype,discount,amount,rentdays,roomtype]);
+        // console.log(arrListCustomers);
+    }
+
+    function displayCustomer() {
+        let result = "";
+        for (let i = 0; i < arrListCustomers.length; i++) {
+            result += "\n" + (i + 1) + "." + "Name: " + arrListCustomers[i][0] +
+                ";IdCard: " + arrListCustomers[i][1];
+        }
+        result += "\n" + (arrListCustomers.length + 1) + ".Back to menu.";
+        let choseDisplayinfor = prompt(result);
+        if (choseDisplayinfor.toString() != (arrListCustomers + 1).toString()) {
+            displayInfomationCustomer(Number.parseInt(choseDisplayinfor) - 1);
+        }else {
+            checkEdditCustomer = false;
+            displayMainMenu();
+        }
+    }
+    function displayInfomationCustomer(index) {
+        if (checkEdditCustomer){
+            let chooseInforEdit = prompt(
+                "1.Name : " + arrListCustomers[index][0] +
+                "\n2.IdCard: " + arrListCustomers[index][1] +
+                "\n3.Birthday: " + arrListCustomers[index][2] +
+                "\n4.Email: " + arrListCustomers[index][3] +
+                "\n5.Address: " + arrListCustomers[index][4] +
+                "\n6.Customertype: " + arrListCustomers[index][5] +
+                "\n7.Discount: " + arrListCustomers[index][6] +
+                "\n8.Amount: " + arrListCustomers[index][7] +
+                "\n9.Rendays: " + arrListCustomers[index][8] +
+                "\n10.Roomtype: " + arrListCustomers[index][9] +
+                    "\n11.Back."
+            );
+        }
+        alert("Information Of Customer: \n" +
+            "Name: " + arrListCustomers[index][0] +
+            "\nIdCard: " + arrListCustomers[index][1] +
+            "\nBirthday: " + arrListCustomers[index][2] +
+            "\nEmail: " + arrListCustomers[index][3] +
+            "\nAddress: " + arrListCustomers[index][4] +
+            "\nCustomertype: " + arrListCustomers[index][5] +
+            "\nDiscount: " + arrListCustomers[index][6] +
+            "\nAmount: " + arrListCustomers[index][7] +
+            "\nRendays: " + arrListCustomers[index][8] +
+            "\nRoomtype: " + arrListCustomers[index][9]
+        )
+    }
+    function chooseCustomerEdit() {
+        checkEdditCustomer = true;
+        displayCustomer();
+    }
+
+    displayMainMenu();
 </script>
 </body>
 </html>

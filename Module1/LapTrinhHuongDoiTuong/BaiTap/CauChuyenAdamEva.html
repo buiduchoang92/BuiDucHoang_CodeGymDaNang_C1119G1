@@ -9,11 +9,11 @@
 
 function Apple() {
     this.setWeigth = function (weigth) {
-        return this.weigth = weigth
-    }
+        this.weigth = weigth
+    };
     this.getWeigth = function () {
         return this.weigth;
-    }
+    };
     this.decrease = function () {
         if (this.weigth > 0) {
             this.weigth--;
@@ -23,34 +23,46 @@ function Apple() {
 
 function Human() {
     this.setName = function (name) {
-        return this.name = name;
-    }
+        this.name = name;
+    };
     this.getName = function () {
         return this.name;
-    }
+    };
     this.setWeigthHuman = function (weigthhuman) {
-        return this.weigthHuman = weigthhuman;
-    }
+        this.weigthHuman = weigthhuman;
+    };
     this.getWeigthHuman = function () {
         return this.weigthHuman;
-    }
-    this.checkApple = function () {
-
-    }
-    this.eat = function () {
-        if (this.weight > 0) {
-            this.WeigthHuman++
-        }
-        this.say = function () {
-
-        }
+    };
+    this.getGender = function () {
+        return this.gender
+    };
+    this.setGender = function (a) {
+        this.gender = a;
+    };
+    this.checkApple = function (apple1) {
+        return apple1.getWeigth();
+    };
+    this.eat = function (apple) {
+        this.weigthHuman++;
+        apple.decrease();
+    };
+    this.say = function () {
+        return this.say = "an toan tao"
     }
 }
     let apple = new Apple();
-    apple.setWeigth(10);
     let adam = new Human();
-    adam.setWeigthHuman(apple);
-    document.write(" " + adam.getWeigthHuman()+"<br/>");
+    let eva = new Human();
+    apple.setWeigth(20);
+    adam.setWeigthHuman(20);
+    eva.setWeigthHuman(10);
+    while (apple.getWeigth()>0) {
+        adam.eat(apple);
+        eva.eat(apple);
+        console.log(adam.getWeigthHuman()
+        +" eva : " + eva.getWeigthHuman());
+    }
 </script>
 </body>
 </html>

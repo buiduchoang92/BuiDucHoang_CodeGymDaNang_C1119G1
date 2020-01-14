@@ -7,17 +7,42 @@
 <body>
 
 <script>
-    var ketQua = "<table border=\"1px\">";
-    for (var dong = 1; dong <= 9; dong++) {
-        ketQua += "<tr>";
-        for (var cot = 2; cot <= 9; cot++) {
-            var o = cot + " x " + dong + " = " + (cot * dong);
-            ketQua += "<td>" + o + "</td>";
-        }
-        ketQua += "</tr>";
+    //1.Hãy cho biết kết quả của đoạn mã sau:
+    // var x = "2";
+    // switch (x) {
+    //     case "1":
+    //         document.write("Monday");
+    //         break;
+    //     case "2":
+    //         document.write("Tuesday");
+    //
+    //     default:
+    //         document.write("Sunday");
+    //         break;
+    // }
+    // //cho 1 mang cac so nguyen(ko duoc sap xep mang)
+    // hay in ra mang con tang dai nhat trong mang tren.Nen co hai ket qua bang nhau,hay in ra mang tim duoc cuoi cung
+    // var x =0
+    // while (x++ < 10) {
+    //     document.write(x);
+    // }
+    let inp = prompt("nhap phan tu cua mang");
+    let arr = new Array(inp);
+    for(let i = 0;i<inp;i++){
+        let a = prompt(i + ":");
+        arr[i] = a;
     }
-    ketQua += "</table>";
-    document.write(ketQua);
+    arr.sort();
+    alert(arr);
+    let number = prompt("insert number");
+    arr.push(number);
+    for(let i = arr.length -1;i>0;i--){
+        if(arr[i] < arr[i-1]){
+            let temp = arr[i];
+            arr[i] = arr[i -1];
+            arr[i-1] = temp;
+        }
+    }document.write(arr);
 </script>
 </body>
 </html>

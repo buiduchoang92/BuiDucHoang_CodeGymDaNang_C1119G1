@@ -11,25 +11,25 @@
     let Rectangle = function (chieuDai,chieuRong) {
         this.chieuDai = chieuDai;
         this.chieuRong = chieuRong;
-        this.getchieuDai = function (chieuDai) {
-            return this.chieuDai
-        }
-        this.getchieuRong = function (chieuRong) {
-            return this.chieuRong
-        }
+        // this.getchieuDai = function (chieuDai) {
+        //     return this.chieuDai
+        // }
+        // this.getchieuRong = function (chieuRong) {
+        //     return this.chieuRong
+        // }
         this.getdienTich = function () {
             return this.chieuDai * this.chieuRong;
         }
         this.getchuVi = function () {
             return (this.chieuDai + this.chieuRong) * 2;
         }
-        this.setchieuDai = function (chieuDai) {
-            this.chieuDai = chieuDai;
-        }
-        this.setchieuRong = function (chieuRong) {
-            this.chieuRong = chieuRong;
-        }
-    }
+        // this.setchieuDai = function (chieuDai) {
+        //     this.chieuDai = chieuDai;
+        // }
+        // this.setchieuRong = function (chieuRong) {
+        //     this.chieuRong = chieuRong;
+        // }
+    };
     function createRectangle(){
         var ctx = document.getElementById("myCanvas").getContext("2d");
         var rectangle = new Rectangle(200,300);
@@ -38,14 +38,15 @@
         ctx.fill();
     }
     createRectangle();
-    let rectangle = new Rectangle(200,300);
-    rectangle.setchieuDai(100);
-    rectangle.setchieuRong(200);
-    let chieuDai = rectangle.getchieuDai();
-    let chieuRong = rectangle.getchieuDai();
+    let rectangle = new Rectangle(100,200);
+    // rectangle.setchieuDai(100);
+    // rectangle.setchieuRong(200);
+    // let chieuDai = rectangle.getchieuDai();
+    // let chieuRong = rectangle.getchieuDai();
     let dienTich = rectangle.getdienTich();
     let chuVi  = rectangle.getchuVi();
-    alert("dientich" +dienTich + "chu vi :" + chuVi);
+    alert("dientich" + dienTich + "chu vi :" + chuVi);
+    document.getElementById('myCanvas').innerHTML = rectangle;
 
 </script>
 </body>

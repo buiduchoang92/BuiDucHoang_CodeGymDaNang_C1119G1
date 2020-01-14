@@ -2,9 +2,278 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //  //bai 1 in ra n la chieu cao cua thap can in ra n dong.
+    // var N = prompt('Nhap gia tri N');
+    // N = parseInt(N);
+    // for (let i =0;i<N;i++){
+    //     for (let j =0;j<N;j++){
+    //         document.writeln(" * ");
+    //     }
+    //     document.writeln("<br/>")
+    // }
+    //bai 2 Nhap vao thang nam bat ki.in ra so ngay tuong ung voi thang nam do.
+    // var inp = prompt("nhap thang:  ");
+    // var nam = prompt("nhap nam: ");
+    // switch (inp) {
+    //     case "1":
+    //     case "3":
+    //     case "5":
+    //     case "7":
+    //     case "8":
+    //     case "10":
+    //     case "12": document.write("so ngay trong thang do la 31 ngay");
+    //         break;
+    //     case "4":
+    //     case "6":
+    //     case "9":
+    //     case "11":
+    //         if (nam%4 == 0){
+    //         document.write("so ngay trong thang do la 29 ngay");
+    //         }else
+    //             document.write("so ngay trong thang do la 28 ngay");
+    //         break;
+    //     case "2":document.write("so ngay trong thang do la 28 ngay");
+    //         break;
+    //     default:
+    //         "Faill";
+    //         break;
+    // }
+    //bai 3 viet chuot trinh tinh S = 1+1/2+1/3...+1/n;
+    // let S = 0;
+    // let n = prompt();
+    // for (let i =0;i <= n;i++){
+    //     S += 1/(i+1);
+    // }
+    // document.write(S);
+    //bai 4 Viet chuong trinh tinh S =15-1+1/2-1/3!+...+(-1)mu (n)1/n!
+    // let S = 1;
+    // let kq = 15;
+    // var n = prompt();
+    // for (let i = 1; i <= n; i++) {
+    //     S = S * i;
+    //     kq += (Math.pow(-1, i) / S);
+    // }
+    // document.write(kq);
+    //bai 5 viet chuong trinh tinh S =1 + 1/3! + 1/5!+...+1/(2n-1)!
+    // let kq = 1;
+    // let n =3;
+    // let S =0;
+    // let m = 1;
+    // for (let i = 1;i <= n  ;i++){
+    //     m *= i;
+    //     kq = (2*i - 1)* m;
+    //     S += 1 / kq;
+    // }
+    // document.write(S);
+    // let n =3;
+    // let S =0;
+    // function giaithua(n) {
+    //     var r = n;
+    //     if (n==0 || n == 1){
+    //         return 1;
+    //     }else {
+    //         r *= giaithua(n-1);
+    //     }
+    //     return r;
+    // }
+    // for (let i = 1;i <= n  ;i++){
+    //     S += 1 /((2*i - 1)* giaithua(n));
+    // }
+    // document.write(S);
+    //bai 6 tinh n!!      = 1*3*5*...*n(n lẽ)
+    //= 2*4*6*...*n(n chẵn)
+    // let n;
+    // let S = 1;
+    // do {
+    //    n = parseInt(prompt("nhap n: "));
+    // }while (n <0);
+    // if (n === 0){
+    //     S = 0;
+    // }
+    // if (n % 2 === 0){
+    //
+    //     for (let i = 2; i <= n ;i += 2){
+    //         S *= i;
+    //     }
+    // } else {
+    //     for (let i =1;i<= n; i+=2){
+    //         S *= i;
+    //     }
+    // }
+    // document.write(S);
+    //7.	Tính tổng và tích các chữ số của một số nguyên dương m cho trước
+    //(Ví dụ : m=234=> S=2+3+4=9, P=2*3*4=24)
+    //cach 1:
+    // var m = parseInt(prompt("Enter m:"));
+    // var sum =0;
+    // var tong = 0 ,tich = 1;
+    // do {
+    //     sum = m % 10;
+    //     tong += sum;
+    //     tich *= sum;
+    //     m = parseInt(m/10);
+    // }while (m!==0);
+    // document.write("tong: " + tong + "tich: " + tich)
+    // alert(num);
+    //Cach 2:
+    // var m = "234";
+    // var tong = 0;
+    // var tich =1;
+    // for (let i=0;i<m.length;i++){
+    //     tong += parseInt(m.charAt(i));
+    //     tich *= parseInt(m.charAt(i));
+    // }
+    // document.write("tong: " + tong + "tich: " + tich);
+    //8.	Nhập 2 số nguyên dương a và b. Sau đó in ra ước chung lớn nhất và bội chung nhỏ nhất của 2 số nguyên dương a và b đó.
+    // let a = parseInt(prompt("Enter Number1: "));
+    // let b = parseInt(prompt("Enter Number2: "));
+    // let s = 0;
+    // let m = 0;
+    // let n = 1;
+    // while (n % a !== 0 || n % b !==0){
+    //     n++;
+    // }
+    // s = n;
+    // m = (a * b) / s;
+    // document.write(s + ": la BCNN  " + m + ": la UCLN");
+    /*9.	Nhập vào một chuỗi ký tự  thực hiện công việc sau:
+    a.	In ra chuỗi đảo ngược của chuỗi đã cho
+    b.	Đổi chuổi đã cho sang chữ hoa
+    c.	Đổi chuỗi đã cho sang chữ thường
+    d.	Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ thường và ngược lại)*/
+    //Cach 1:
+    // var str = "this is string";
+    // var str1 = "";
+    // for (let i = str.length-1;i>=0;i--){
+    //     str1 += str[i];
+    // }
+    // alert(str1);
+    //Cach 2 :
+    // var str = "this is string";
+    // var str1 = str.split("").reverse().join("")
+    // alert(str1);
+    //b.c.
+    //  var str = "this is string";
+    // str1 = str.toLocaleUpperCase();
+    //  alert(str1);
+    //  str1 = str.toLocaleLowerCase();
+    //  alert(str1);
+    //d.
+    // var str = prompt("Nhập vào chuỗi bất kỳ");
+    // var lower = str.toLocaleLowerCase();
+    // var result = [];
+    // for (var i=0; i < str.length; i++) {
+    //     if (lower.includes(str[i])) {
+    //         result.push(str[i].toUpperCase());
+    //     }
+    //     else {
+    //         result.push(str[i].toLowerCase());
+    //     }
+    // }
+    // document.write(result.join(""));
+    /*10.	Nhập một chuổi ký tự tuỳ ý, sau đó thực hiện công việc sau:
+        a. In mỗi từ trên mỗi dòng
+        b. Đếm số từ có trong chuổi đã cho.
+        c. Đưa ra bảng tần số xuất hiện của các từ.*/
+    // var str = "abcddabc";
+    // var str1 ="";
+    // for (let i = 0 ;i < str.length;i++){
+    //     str1 += str.charAt(i) + "\n" ;
+    // }
+    // alert(str1);
+    // b.
+    // var count = 0;
+    // for (let i = 0;i < str.length;i++){
+    //     count++;
+    // }
+    // alert(count);
+    //c.
+    // var temp = "This is a string.";
+    // let count3 = "";
+    // do {
+    //     let count = temp.charAt(0);
+    //     let count2 = 0;
+    //     for (let i = 0; i < temp.length; i++) {
+    //         if (count === temp.charAt(i)) {
+    //             count2++;
+    //         }
+    //     }
+    //     alert(count + ' xuat hien: ' + count2);
+    //     count3 = temp.split(count);
+    //     temp = "";
+    //     for (let j = 0; j < count3.length; j++) {
+    //         temp += count3[j];
+    //     }
+    // } while (temp.length !== 0);
+    /*11.	Viết chương trình thực hiện các công việc như sau :
+        a.	Nhập một mảng a gồm n phần tử kiểu nguyên int
+        b.	Tính tổng số dương lẻ mảng a
+        c.	Nhập phần tử k, tìm xem k có xuất hiện trong mảng a không. Nếu có chỉ ra phần tử ở vị trí đầu tiên;
+        d.	Sắp sếp mảng a theo thứ tự tăng dần..
+        e.	Chèn phần tử p vào mảng a sao cho mảng a vẫn đảm bảo tăng dần và xuất lại mảng a.*/
+    //a.
+    // arr = [3,2,1,4,5,6,7,8,9];
+    // let S = 0;
+    // for (let i =0;i < arr.length;i++){
+    //     if (arr[i]%2 !== 0){
+    //         S += arr[i];
+    //     }
+    // }
+    // alert(S);
+    // let temp = parseInt(prompt("Enter k: "));
+    // arr.push(temp);
+    // for (let i = 0;i< arr.length;i++){
+    //     if (arr[i] === temp){
+    //         temp = i;
+    //         break;
+    //     }
+    // }
+    // alert("vi tri xuat hien dau tien la: " + temp);
+    // arr.sort();
+    // alert(arr);
+    //e.
+    // let number = prompt("Enter: ");
+    // arr.push(number);
+    // let temp2 = "";
+    // for (let i = arr.length-1;i >= 0;i--){
+    //     if (arr[i] < arr[i-1]){
+    //         temp2 = arr[i];
+    //         arr[i] = arr[i-1];
+    //         arr[i-1] = temp2;
+    //     }
+    // }
+    // alert(arr);
+    /*12.	Viết chương trình thực hiện công việc sau:
+a.	Nhập ma trận a (m dòng, n cột) gồm các phần tử kiểu int
+b.	Tính tích các số là bội số của 3 nằm trên dòng đầu tiên của ma trận a.
+c.	Tạo ra mảng một chiều X[i] với X[i] là các giá trị lớn nhất trên dòng i của ma trận a
+d.	Xoá đi phần tử đầu tiên của mảng X[i], xuất lại mảng X[i]. */
+    // var arr = [];
+    // let dong = parseInt(prompt("nhap dong: "));
+    // let  cot = parseInt(prompt(" nhap cot: "));
+    // for (let i = 0;i < dong; i++ ){
+    //     for (let j =0; j < cot;j++){
+    //         arr[i] = new Array();
+    //     }
+    // }
+    // for (let i = 0;i < dong; i++ ){
+    //     for (let j =0; j < cot;j++){
+    //         if (i ===0) {
+    //             arr[i][j] = "hello";
+    //         }
+    //         if (i ===1){
+    //             arr[i][j] = "bye";
+    //         }
+    //     }
+    // }
+    //console.log(arr);
+   
+
+
+</script>
 </body>
 </html>

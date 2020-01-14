@@ -8,23 +8,24 @@
 <script>
     function Temperature(C) {
         this.C = C;
-        let camco = true;
-        do {
-            let c = parseInt(prompt("nhap nhiet do vao :"));
-             if (c<-273){
-                 camco = false;
-                 alert("nhap sai hay nhap lai!")
-             }
-        }while (!camco);
+
+        // let camco = true;
+        // do {
+        //     let c = parseInt(prompt("nhap nhiet do vao :"));
+        //      if (c<-273){
+        //          camco = false;
+        //          alert("nhap sai hay nhap lai!")
+        //      }
+        // }while (!camco);
 
         this.getF = function () {
-            return this.C + 32;
-        }
+            return this.c + 32;
+        };
         this.getKenvin = function () {
-            return this.C + 273.15;
-        }
+            return this.c + 273.15;
+        };
     }
-    let temperature = new Temperature(25);
+    let temperature = new Temperature();
     let F = temperature.getF();
     let Kenvin = temperature.getKenvin();
     alert("nhiet do F :" +  F + "\nnhiet do Kenvin :" +  Kenvin);

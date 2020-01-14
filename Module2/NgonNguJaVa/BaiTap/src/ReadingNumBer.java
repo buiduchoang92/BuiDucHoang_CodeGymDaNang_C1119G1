@@ -1,104 +1,104 @@
 import java.util.Scanner;
-
 public class ReadingNumBer {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter NumBer: ");
-        int number = scanner.nextInt();
-        String datamain= "";
-        String datamain1 = "";
-        String datamain2 = "";
-        String datamain3 = "";
-        int number3 = number / 100;
-        int number1 = number % 10;
-        int number2 = number /10;
-                switch (number1) {
-                case 0:
-                    datamain = "zero";
-                    break;
+        Scanner sc = new Scanner(System.in);
+        int number;
+        System.out.println("input number : ");
+        number = sc.nextInt();
+        int num = 0;
+        int temp = 3;
+        int temp1 = 0;
+        while (number > 0) {
+            if (number >= 100) {
+                num = number / 100;
+                number = number % 100;
+                temp1 = 1;
+                temp = 3;
+                //  System.out.print("hundred");
+            } else if (number >= 20) {
+                num = number / 10;
+                number = number % 10;
+                temp1 = 2;
+                temp--;
+                // System.out.println("ty");
+            } else if (number >= 16) {
+                num = number % 10;
+                number = number / 10;
+                temp1 = 1;
+                temp--;
+                //System.out.print("teen");
+            } else {
+                num = number;
+                number = -1;
+                temp1 = 1;
+                temp--;
+            }
+            switch (num) {
                 case 1:
-                    datamain = "one";
+                    System.out.print("one");
                     break;
                 case 2:
-                    datamain = "tow";
+                    if (temp1 == 2)
+                        System.out.print("twen");
+                    else
+                        System.out.print("two");
                     break;
                 case 3:
-                    datamain = "three";
+                    if(temp1 == 2)
+                        System.out.print("thir");
+                    else
+                        System.out.print("three");
                     break;
                 case 4:
-                    datamain = "for";
+                    System.out.print("four");
                     break;
                 case 5:
-                    datamain = "five";
+                    if(temp1 == 2)
+                        System.out.print("fift");
+                    else
+                        System.out.print("five");
                     break;
                 case 6:
-                    datamain = "six";
+                    System.out.print("six");
                     break;
                 case 7:
-                    datamain = "seveen";
+                    System.out.print("seven");
                     break;
                 case 8:
-                    datamain = "eight";
+                    System.out.print("eight");
                     break;
                 case 9:
-                    datamain = "night";
+                    System.out.print("nine");
                     break;
+                case 10:
+                    System.out.print("ten");
+                    break;
+                case 11:
+                    System.out.print("eleven");
+                    number = -1;
+                    continue;
+                case 12:
+                    System.out.print("twelve");
+                    number = -1;
+                    continue;
+                case 13:
+                    System.out.print("thirteen ");
+
+                    number = -1;
+                    continue;
+                case 14:
+                    System.out.print("fourteen ");
+                    number = -1;
+                    continue;
+                case 15:
+                    System.out.print("fifteen ");
+                    number = -1;
+                    continue;
             }
-            switch (number2) {
-                case 2:
-                    datamain2 = "twenty";
-                    break;
-                case 3:
-                    datamain2 = "thirty";
-                    break;
-                case 4:
-                    datamain2 = "forty";
-                    break;
-                case 5:
-                    datamain2 = "fifty";
-                    break;
-                case 6:
-                    datamain2 = "sixty";
-                    break;
-                case 7:
-                    datamain2 = "seventy";
-                    break;
-                case 8:
-                    datamain2 = "eigthty";
-                    break;
-                case 9:
-                    datamain2 = "nigthty";
-                    break;
-            }
-        switch (number3){
-            case 1:
-               datamain3 = "onehundred";
-                break;
-            case 2:
-                datamain3 = "towhundred";
-                break;
-            case 3:
-                datamain3 = "threehundred";
-                break;
-            case 4:
-                datamain3 = "forhundred";
-                break;
-            case 5:
-                datamain3 = "fivehundred";
-                break;
-            case 6:
-                datamain3 = "sixhundred";
-                break;
-            case 7:
-                datamain3 = "sevenhundred";
-                break;
-            case 8:
-                datamain3 = "eigthhundred";
-                break;
-            case 9:
-                datamain3 = "nigthhundred";
-                break;
+            if (temp == 3) {
+                System.out.print("hundred ");
+            } else if (temp == 2)
+                System.out.print("ty ");
         }
-        System.out.printf("so %d la %s%s%s" ,number,datamain2,datamain1,datamain,datamain3);
     }
 }

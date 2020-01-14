@@ -2,9 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //bai 1:
+    // function findMinScore() {
+    //     let arr = [9, 8, 6, 4, 10, 5, 2, 3, 1];
+    //     let temp = "";
+    //     for (let i = 0; i < arr.length; i++) {
+    //         for (let j = i; j < arr.length; j++) {
+    //             if (arr[i]> arr[j + 1]) {
+    //                 temp = arr[j+1];
+    //                 arr[j+1]=arr[i];
+    //                 arr[i]=temp;
+    //             }
+    //         }
+    //
+    //     }
+    //     console.log(arr);
+    //     let min = arr[0];
+    //     document.write(min);
+    // }
+    // findMinScore();
+    //bai 2:
+    // let arr = [1, 2, 3, 4];
+    // let arr2 = [];
+    // let n = parseInt(prompt("nhap chi so index: "));
+    //
+    // function tryRemoveFromArray(arr, n) {
+    //cach 1;
+    //         return arr.splice(n, 1);
+    //cach 2;
+    // for (let i=0;i < arr.length;i++){
+    //     if (n === i){
+    //         continue;
+    //     } else {
+    //        arr2.push(arr[i]);
+    //     }
+    // }
+    //}
+    //
+    // tryRemoveFromArray(arr, n);
+    // document.write(arr);
+    //bai 3:
+    // cach 1:Xu li chuoi.
+    // let s = 0;
+    // let t = 1;
+    // let n = prompt("nhap so nguyen: ");
+    // let check = true;
+    // function isCheckNumber(n) {
+    //     for (let i = 0; i < n.length; i++) {
+    //         if (i < 3) {
+    //             s += Number.parseInt(n.charAt(i));
+    //         } else {
+    //             t *= Number.parseInt(n.charAt(i));
+    //         }
+    //         if (s===t){
+    //             return check;
+    //         } else {
+    //             return check = false;
+    //         }
+    //     }
+    // }
+    // isCheckNumber(n);
+    // alert(check);
+    //cach 2 :xu li so:
+    // var m = prompt("nhap so: ");
+    // var fish = parseInt(m/1000);
+    // var lash = m % 1000;
+    // var tich =1;tong = 0;
+    // var check = true;
+    // do {
+    //     tong += lash % 10;
+    //     lash = parseInt(lash / 10);
+    //     tich *= fish%10;
+    //     fish = parseInt(fish/10);
+    // }while (fish !== 0);
+    // if (tong === tich){
+    //     check;
+    // } else {
+    //     check = false;
+    // }
+    // alert(check);
+    //bai 4 :
+    // function Employee() {
+    //     this.setName = function (name) {
+    //         this.name = name;
+    //     };
+    //     this.getName = function () {
+    //         return this.name;
+    //     };
+    //     this.setAddress = function (address) {
+    //         this.address = address;
+    //     };
+    //     this.getAddress = function () {
+    //         return this.address;
+    //     };
+    //     this.setUsername = function (username) {
+    //         this.username = username;
+    //     };
+    //     this.getUsername = function () {
+    //         return this.username;
+    //     };
+    //     this.setPassword = function (password) {
+    //         this.password = password;
+    //     };
+    //     this.getPassword = function () {
+    //         return this.password;
+    //     }
+    //
+    // }
+    // function menu1() {
+    //     let choose = prompt("\n" +
+    //     "1.Register"+
+    //     "\n2.Login"+
+    //     "\n3.Exit");
+    //     switch (choose) {
+    //         case "1":
+    //             Register();
+    //             break;
+    //         case "2":
+    //             Login();
+    //             break;
+    //         case "3":
+    //             break;
+    //     }menu1()
+    // }
+    // function Register() {
+    //     let name = prompt("Nhap ten: ");
+    //     let address = prompt("Nhap dia chi: ");
+    //     let username = prompt("Nhap username: ");
+    //     let password = prompt("Nhap password: ");
+    //     employee.setName(name);
+    //     employee.setAddress(address);
+    //     employee.setUsername(username);
+    //     employee.setPassword(password);
+    // menu1();
+    // }
+    // let employee = new Employee();
+    // function Login(){
+    //     let username1 = prompt("Nhap username: ");
+    //     let password1 = prompt("Nhap password: ");
+    //     if (username1 === employee.getUsername()&& password1 === employee.getPassword()){
+    //         alert("login complete");
+    //        menu2();
+    //     }else {
+    //         alert("Tai khoan hoac mat khau ko dung");
+    //         Login();
+    //     }
+    // }
+    // function menu2(){
+    //     let chose2 = prompt("\n"+
+    //         "\n1.Show Information" +
+    //         "\n2.Logout" +
+    //         "\n3.Exit");
+    //     switch (chose2) {
+    //         case "1":
+    //             let name = employee.getName();
+    //             let address = employee.getAddress();
+    //             let username = employee.getUsername();
+    //             //let password = employee.getPassword();
+    //             alert("1.name: " + name +"\naddress: " + address +"\nusername: " + username);
+    //             menu1();
+    //             break;
+    //         case "2":
+    //             menu1();
+    //             break;
+    //         case "3":
+    //             break;
+    //     }
+    // }
+    // menu1();
+    //bai 5:
+    // let arr = ["a",1,2,3,4,"b",3,4,5,6,7,8,"a",1,2,3];
+    // let arrTemp =["a",1,2,3];
+    // let count = 0 ;
+    // let count1 = 0;
+    // for (let i=0;i<arr.length;i++){
+    //     count =0;
+    //     if (arr[i]===arrTemp[0]){
+    //         for (let j=0;j<arrTemp.length;j++){
+    //             if (arr[i]===arrTemp[j]){
+    //                 count++;
+    //                 i++;
+    //             } else {
+    //                 count = 0;
+    //                 break;
+    //             }
+    //         }
+    //     } if (count===arrTemp.length){
+    //         count1++;
+    //     }
+    // }
+    // alert(count1);
+
+</script>
 </body>
 </html>

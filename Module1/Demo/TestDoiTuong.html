@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        img {
+            width: 200px;
+            height: 150px;
+            //loat: left;
+            margin: auto;
+        }
+        table {
+            width:100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-$END$
+<input type="text" placeholder="Name" id="name"/>
+<input type="text" placeholder="Address" id="address"/>
+<input type="text" placeholder="Selary" id="selary"/>
+<input type="text" placeholder="Wordday" id="wordday"/>
+<div>
+    <img src="consumer-icon-with-male-customer-person-profile-vector-25841855.jpg" height="1080" width="1000"/>
+    <button value="Add" onclick="addCustomer()">AddCustomer</button>
+    <button value="Show" onclick="showCustomer()">ShowCustomer</button>
+</div>
+<div>
+    <img src="icon_customer_1153837.png" height="512" width="512"/>
+    <button value="Show" onclick="addEmploy()">AddEmployee</button>
+    <button value="Show" onclick="showEmployee()">ShowEmployee</button>
+</div>
+<table id="tableProduct">
+
+</table>
+
+<script src="EmPloyee.js"></script>
+<script src="run.js"></script>
+<script src="Customer.js"></script>
 </body>
+
 </html>

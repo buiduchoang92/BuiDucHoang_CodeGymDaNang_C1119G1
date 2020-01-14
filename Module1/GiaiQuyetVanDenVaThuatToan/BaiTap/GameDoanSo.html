@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    var arr = [];
+    function hamnhiphan(arr,x) {
+        let mit = parseInt((arr.length)/2);
+            if (arr[mit] === x){
+                return mit;
+            }
+            if (arr[mit] > x){
+                for (let i = mit;i > 0;i--){
+                    arr[i] = x;
+                    return i;
+                }
+            }
+            if (arr[mit] < x){
+                for (let i = mit;i < arr.length;i++){
+                    arr[i] = x;
+                    return i;
+                }
+            }
+    }
+    var num = [1,2,6,4,7,5,3,8,9,10];
+    // for (let i =0;i < 10;i++){
+    //     num[i] = Math.floor(Math.random()*101);
+    // }
+    num.sort();
+    var inp = prompt("nhap so: ");
+    var res = hamnhiphan(num,inp);
+    document.write("so: " + inp + "nam o vi tri: " + res);
+</script>
 </body>
 </html>

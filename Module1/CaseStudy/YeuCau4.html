@@ -13,30 +13,48 @@
     let arrNameCustomer = [];
     switch (choose) {
         case "1" :
-            let arrlenght = parseInt(prompt("So luong Customer Muon Them :"));
+            let arrlenght = prompt("So luong Customer Muon Them :");
             for (let i = 0; i < arrlenght; i++) {
-                let arrNameCustomer
-                array[i] = num + "\n";
+                arrNameCustomer.push(prompt("Enter Name Customer:" ));
             }
-            array.sort();
-            let str = "";
-            for (let i = 0; i < amount; i++) {
-                str += i + "." + array[i].split(" , ");
+            var result = "";
+            for (let i = 0; i < arrNameCustomer.length; i++) {
+                result += "\n" + (i + 1) + ". " + arrNameCustomer[i];
             }
 
-            alert("List Customer :" + "\n" + str);
+            arrNameCustomer.sort();
+            result = "";
+            for (let i = 0; i < arrNameCustomer.length; i++) {
+                result += "\n" + (i + 1) + ". " + arrNameCustomer[i];
+            }
+            alert(result);
             break;
         case "2" :
-            let listCustomer = ["Hoang", "\nHai", "\nKien", "\nHuy", "\nTuan", "\nDuc", "\nNgoc", "\nDang", "\nDiep", "\nNgoc"];
-            let deleteCustomer = parseInt(prompt(listCustomer));
-            for (i = 0; i < listCustomer.length; i++) {
-                if (deleteCustomer === i) {
-                    listCustomer.splice(i - 1, 1);
-                }
+            arrNameCustomer[0] = "An";
+            arrNameCustomer[1] = "Binh";
+            arrNameCustomer[2] = "Vu";
+            arrNameCustomer[3] = "Duy";
+            arrNameCustomer[4] = "Hoang";
+            arrNameCustomer[5] = "Hai";
+            arrNameCustomer[6] = "Phuong";
+            arrNameCustomer[7] = "Huy";
+            arrNameCustomer[8] = "Tuan";
+            arrNameCustomer[9] = "Hong";
+            var result = "";
+            for (let i = 0; i < arrNameCustomer.length; i++) {
+                result += "\n" + (i + 1) + ". " + arrNameCustomer[i];
             }
-            alert(listCustomer);
+            let indexDelete = prompt("Customer you want to delete:" + result);
+            arrNameCustomer.splice(Number.parseInt(indexDelete)- 1,1);
+            let resultAfterDelete = "";
+            for (let i = 0; i < arrNameCustomer.length; i++) {
+                resultAfterDelete += "\n" + (i + 1) + ". " + arrNameCustomer[i];
+            }
+            alert("List customer atter Delete :" + resultAfterDelete);
+            break;
         default :
             alert("The Number Edit Is Not! Please Try Again!");
+            break;
     }
 </script>
 </body>

@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function checkNumber(arr) {
+        var regexp = /((09|03|07|08|05)+([0-9]{8})\b)/;
+        for (let i = 0;i < arr.length;i++) {
+            if (regexp.test(arr[i])) {
+                alert("so dt chinh xac " + "tai vi tri: " +i)
+            } else {
+                alert("ko chinh xac " +"tai vi tri: "+ i);
+            }
+        }
+    }
+    var num = ["0912345678","0312345678","061235678","091234567"];
+    checkNumber(num);
+</script>
 </body>
 </html>

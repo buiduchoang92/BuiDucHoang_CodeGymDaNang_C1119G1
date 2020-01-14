@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>CongTacBongDen</title>
 </head>
+<input type="button" value="turnOn" onclick="turnOn()">
+<input type="button" value="turnOff" onclick="turnOff()">
 <body>
-$END$
+<script>
+    function ElectricLamp() {
+        this.bat = function () {
+            this.status = true;
+        };
+        this.tat = function () {
+            this.status = false;
+        };
+        this.lamp = function () {
+            if (this.status) {
+                alert("Den Sang");
+            } else {
+                alert("Tat Den");
+            }
+        }
+    }
+
+    function SwitchButton(electric) {
+        this.switchOn = function () {
+            electric.bat();
+        };
+        this.switchOff = function () {
+            electric.tat();
+        }
+    }
+    let electric = new ElectricLamp();
+    let switchButton = new SwitchButton(electric);
+    function turnOn() {
+        switchButton.switchOn();
+        electric.lamp();
+    }
+
+    function turnOff() {
+        switchButton.switchOff();
+        electric.lamp();
+    }
+</script>
 </body>
 </html>

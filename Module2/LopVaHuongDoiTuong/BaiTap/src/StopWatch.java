@@ -1,8 +1,9 @@
 public class StopWatch {
-    private double startTime,endTime;
-    public StopWatch(double startTime,double endTime){
-       this.startTime = startTime;
-       this.endTime = endTime;
+    private double startTime, endTime;
+
+    public StopWatch(double startTime, double endTime) {
+        this.startTime = startTime;
+        this.endTime = endTime;
     }
 
     public StopWatch() {
@@ -15,13 +16,16 @@ public class StopWatch {
     public double getEndTime() {
         return endTime;
     }
-    public double getStart(){
+
+    public double getStart() {
         return startTime = System.currentTimeMillis();
     }
-    public double getStop(){
-        return  endTime = System.currentTimeMillis();
+
+    public double getStop() {
+        return endTime = System.currentTimeMillis();
     }
-    public double getElapsedTime(){
+
+    public double getElapsedTime() {
         return this.endTime - this.startTime;
     }
 }

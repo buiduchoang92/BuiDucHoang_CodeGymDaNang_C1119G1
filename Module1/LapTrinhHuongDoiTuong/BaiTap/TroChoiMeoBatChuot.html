@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function Rat() {
+        this.setName=function (name) {
+            this.name = name;
+        };
+        this.getName=function () {
+            return this.name
+        };
+        this.setWeigth = function (weigth) {
+            this.weigth = weigth;
+        };
+        this.getWeigth = function () {
+            return this.weigth;
+        };
+        this.setSpeed = function (speed) {
+            this.speed = speed;
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.setStatus = function (status) {
+            this.status = status;
+        };
+        this.getStatus = function () {
+            return this.status;
+        }
+    }
+    function Cat() {
+        this.setWeigth = function (weigth) {
+            this.weigth = weigth;
+        };
+        this.getWeigth = function () {
+            return this.weigth;
+        };
+        this.setSpeed = function (speed) {
+            this.speed = speed;
+        };
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.eat = function (mouse) {
+            if (mouse.setStatus(false)) {
+                this.weigth;
+            } else {
+                this.weigth = this.weigth + mouse.weigth;
+                mouse.setWeigth(0);
+                mouse.setStatus("chuot chet")
+            }
+
+        };
+        this.catch = function (mouse) {
+          if (this.speed > mouse.speed){
+              alert("bat duoc chuot " + "co toc do: "+ mouse.speed);
+          }else {
+              alert("ko bat duoc " + "co toc do: " + mouse.speed);
+          }
+        }
+    }
+    let chuot1 = new Rat();
+    let chuot2 = new Rat();
+    let meo = new Cat(chuot1);
+    meo.setWeigth(30);
+    chuot1.setWeigth(20);
+    chuot1.setStatus(false);
+    chuot2.setWeigth(25);
+    meo.setSpeed(55);
+    chuot1.setSpeed(40);
+    chuot2.setSpeed(56);
+    meo.eat(chuot1);
+    meo.eat(chuot2);
+    meo.catch(chuot1);
+    meo.catch(chuot2);
+    document.write("khoi luong Cat: " + meo.weigth + "khoi luong Chuot" + chuot1.weigth + "\n"
+    + chuot1.getStatus());
+</script>
 </body>
 </html>
