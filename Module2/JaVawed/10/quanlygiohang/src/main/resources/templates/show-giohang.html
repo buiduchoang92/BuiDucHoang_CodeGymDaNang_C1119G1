@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h3>List GioHang</h3>
+<p>
+    <a th:href="@{/}">
+       Show List
+    </a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<table id = "products">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Made in</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Action</th>
+        <th>BeforBy</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${giohang.getList()}">
+        <th th:text="${rowStat.index + 1}"></th>
+        <td th:text="${row.productName}"></td>
+        <td th:text="${row.madeIn}"></td>
+        <td th:text="${row.description}"></td>
+        <td  ><img th:src="${row.image}" style="width: 300px;height: 200px"></td>
+        <td><a th:href="@{/delete-giohang/__${row.id}__ }">Detail</a></td>
+        <td><a th:href="@{/view-product/__${row.id}__ }">Befor By</a></td>
+    </tr>
+    </tbody>
+</table>
+<p>
+    <a href="/">Thanh Toan</a>
+</p>
+</body>
+</html>

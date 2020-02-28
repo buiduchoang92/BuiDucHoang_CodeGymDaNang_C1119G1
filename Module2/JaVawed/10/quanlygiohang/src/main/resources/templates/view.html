@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Product</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <a th:href="@{/}">
+        Back to product list
+    </a>
+</p>
+<h1>View Product</h1>
+<div id="form">
+    <form th:action="@{/product-giohang}" th:object="${product}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Product Name</label>
+            <input type="text" th:field="*{productName}" />
+        </div>
+        <div>
+            <label>Made in</label>
+            <input type="text" th:field="*{madeIn}"/>
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" th:field="*{description}"/>
+        </div>
+
+        <div>
+            <label>Image</label><br>
+            <img  th:src="*{image}" style="width: 300px;height: 200px"/>
+        </div>
+
+        <input type="submit" value="Chon Mua"></input>
+    </form>
+</div>
+</body>
+</html>

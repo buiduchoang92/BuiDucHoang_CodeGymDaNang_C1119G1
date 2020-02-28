@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+<h1>Customers</h1>
+<p>
+    <a th:href="@{/index}">Trang Chu</a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

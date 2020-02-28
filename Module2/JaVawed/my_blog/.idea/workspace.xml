@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b0d6f31-7c97-49bf-a1a8-c7fc8e3e0089" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/reponsitory/ProductReponsitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/reponsitory/ProductReponsitory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/reponsitory/Reponsitory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/reponsitory/produc_reponsitory_impl/ProductReponsitoryImplement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/services/product_services_implement/ProductServicesImlement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../10/quanlygiohang/src/main/java/com/codegym/services/product_services_implement/ProductServicesImlement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10/quanlygiohang/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../10/quanlygiohang/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../8.Spring Data Repository/Blog.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/artifacts/DemoController_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/libraries/Spring_5_2_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/libraries/Spring_MVC_5_2_3_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/libraries/taglibs_standard_impl_1_2_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/DemoController.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-aop-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-aspects-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-beans-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-context-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-context-support-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-core-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-expression-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-instrument-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-jdbc-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-jms-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-messaging-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-orm-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-oxm-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-test-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-tx-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-web-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/lib/spring-webmvc-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/Dao/StudentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/controllers/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/controllers/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/entity/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/repository/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/repository/StudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/repository/impl/StudentRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/classes/service/impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-aop-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-aspects-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-beans-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-context-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-context-support-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-core-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-expression-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-instrument-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-jdbc-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-jms-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-messaging-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-orm-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-oxm-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-test-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-tx-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-web-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/spring-webmvc-5.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/views/addnew.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/views/listStudent.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/artifacts/DemoController_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/Dao/StudentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/controllers/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/controllers/StudentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/entity/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/repository/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/repository/StudentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/repository/impl/StudentRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/service/StudentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/out/production/DemoController/service/impl/StudentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/Dao/StudentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/controllers/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/controllers/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/repository/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/repository/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/repository/impl/StudentRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/src/service/impl/StudentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/web/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/web/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/web/WEB-INF/views/addnew.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/web/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/web/WEB-INF/views/listStudent.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DemoController/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/src/main/java/com/codegym/quanlikhachhangquanlitinh/QuanlikhachhangQuanlitinhApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThaoTacVoiCSDLvaORM/quanlikhachhang-quanlitinh/src/test/java/com/codegym/quanlikhachhangquanlitinh/QuanlikhachhangQuanlitinhApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/MyBlogApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/controller/BlogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/model/Blog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/repository/BlogRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/service/BlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/service/implement/BlogServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tmt/my_blog/service/implement/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tmt/my_blog/MyBlogApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XyhbAGkfL9qkCZeTLt7Ai96MB5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="ExpandSpringBootSpringBootSettingsPanel" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../11.Web Service và RESTful/Blog-res-ful" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="MyBlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="my_blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmt.my_blog.MyBlogApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b0d6f31-7c97-49bf-a1a8-c7fc8e3e0089" name="Default Changelist" comment="" />
+      <created>1582024310908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582024310908</updated>
+      <workItem from="1582024315583" duration="7141000" />
+      <workItem from="1582077654206" duration="29000" />
+      <workItem from="1582084614612" duration="113000" />
+      <workItem from="1582084939427" duration="43000" />
+      <workItem from="1582085112016" duration="16000" />
+      <workItem from="1582085265162" duration="1173000" />
+      <workItem from="1582087334182" duration="803000" />
+      <workItem from="1582090321194" duration="9813000" />
+      <workItem from="1582116091330" duration="4453000" />
+      <workItem from="1582248614853" duration="4622000" />
+      <workItem from="1582768416077" duration="402000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="26" key="#Project_Structure" timestamp="1582768562119">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="26" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1582768562119" />
+    <state x="198" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582768587715">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="198" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582768587715" />
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1582085509186" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1582087543262">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1582087543262" />
+    <state x="498" y="201" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582085298181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="201" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1582085298181" />
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582025526055">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582025526055" />
+    <state x="487" y="151" key="FileChooserDialogImpl" timestamp="1582768817521">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="487" y="151" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582768817521" />
+    <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.0.bottom" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.0.center" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.0.left" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.0.right" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.1.bottom" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.1.center" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.1.left" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state width="1493" height="39" key="GridCell.Tab.1.right" timestamp="1582086446710">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="39" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582086446710" />
+    <state x="221" y="0" key="SettingsEditor" timestamp="1582116115536">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="221" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582116115536" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582085498351" />
+    <state x="390" y="197" key="com.intellij.ide.util.TipDialog" timestamp="1582116090367">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="197" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582116090367" />
+    <state x="339" y="167" key="run.anything.popup" timestamp="1582252499837">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="167" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582252499837" />
+  </component>
+</project>

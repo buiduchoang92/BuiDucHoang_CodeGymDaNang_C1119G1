@@ -1,7 +1,13 @@
 package com.codegym.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "products")
 public class Product {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String productName;
     private String madeIn;
     private String description;
@@ -10,19 +16,11 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String productName, String madeIn, String description, String imgage) {
-        this.id = id;
-        this.productName = productName;
-        this.madeIn = madeIn;
-        this.description = description;
-        this.image = imgage;
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,7 +52,7 @@ public class Product {
         return image;
     }
 
-    public void setImage(String imgage) {
-        this.image = imgage;
+    public void setImage(String image) {
+        this.image = image;
     }
 }

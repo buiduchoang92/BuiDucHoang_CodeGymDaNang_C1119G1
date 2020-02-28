@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Customer</title>
+    <style>
+    body {
+        background-color: powderblue;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    p {
+        color: blue;
+    }
+
+    input {
+        width: 150px;
+        height: 30px;
+    }
+    label{
+
+        /*color: #2e59d9;*/
+    }
+</style>
+</head>
+<body>
+<h1>Edit Customer</h1>
+<p>
+    <a th:href="@{/customers}"><h2>List Customer</h2></a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div id="form">
+    <form action="#" th:action="@{/edit-customer}" th:object="${customers}" method="post" novalidate="novalidate">
+        <input type="hidden" th:field="*{idCustomer}"/>
+        <div>
+            <label>NameCustomer</label><br>
+            <input type="text" th:field="*{nameCustomer}"/>
+        </div>
+        <div>
+            <label>BirthdayCustomer</label><br>
+            <input type="date" th:field="*{birthdayCustomer}"/>
+        </div>
+        <div>
+            <label>PhoneNumberCustomer</label><br>
+            <input type="text" th:field="*{phoneNumberCustomer}"/>
+        </div>
+
+        <div>
+            <label>EmailCustomer</label><br>
+            <input type="text" th:field="*{emailCustomer}"/>
+        </div>
+        <div>
+            <label>AddressCustomer</label><br>
+            <input type="text" th:field="*{addressCustomer}"/>
+        </div>
+        <div>
+            <label>TypeOfCustomer</label><br>
+            <input type="text" th:field="*{typeOfCustomer}"/>
+        </div>
+        <input type="submit" value="Save" style="width: 70px;height: 50px" ></input>
+    </form>
+</div>
+
+</body>
+</html>

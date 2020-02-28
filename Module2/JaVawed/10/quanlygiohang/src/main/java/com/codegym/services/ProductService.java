@@ -5,9 +5,13 @@ import com.codegym.model.Product;
 import java.util.List;
 
 public interface ProductService {
-    List<Product> getAllProducts();
+    Iterable<Product> findAll();
+
+    Product findById(Long id);
+
     void save(Product product);
-    void delete(int id);
-    Product findById(int id);
-    void update(int id,Product product);
+
+    void remove(Product product);
+
+    Product findByIdZ(Long id);
 }

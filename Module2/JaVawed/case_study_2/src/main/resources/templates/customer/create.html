@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Customer</title>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: blue;
+        }
+
+        input {
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>Create Customer</h1>
+<p>
+    <a th:href="@{/customers}"><h2>List Customer</h2></a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div id="form">
+    <form action="#" th:action="@{/create-customer}" th:object="${customers}" method="post">
+        <table>
+            <tr>
+                    <input type="hidden" th:field="*{idCustomer}"/>
+            </tr>
+            <tr>
+                <td>NameCustomer</td>
+                <td><input type="text"  th:field="*{nameCustomer}"/></td>
+            </tr>
+            <tr>
+                <td>BirthdayCustomer</td>
+                <td><input type="date" th:field="*{birthdayCustomer}"/></td>
+            </tr>
+            <tr>
+                <td>PhoneNumberCustomer</td>
+                <td><input type="text" th:field="*{phoneNumberCustomer}"/></td>
+                <td th:if="${#fields.hasErrors('phoneNumberCustomer')}" th:errors="*{phoneNumberCustomer}"></td>
+            </tr>
+            <tr>
+                <td>EmailCustomer</td>
+                <td><input type="text" th:field="*{emailCustomer}"/></td>
+            </tr>
+            <tr>
+                <td>AddressCustomer</td>
+                <td><input type="text" th:field="*{addressCustomer}"/></td>
+            </tr>
+            <tr>
+                <td>TypeOfCustomer</td>
+                <td><input type="text" th:field="*{typeOfCustomer}"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" style="width: 70px;height: 50px"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

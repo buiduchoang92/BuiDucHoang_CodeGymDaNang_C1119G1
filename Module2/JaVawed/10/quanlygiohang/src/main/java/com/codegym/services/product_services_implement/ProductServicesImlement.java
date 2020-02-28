@@ -2,35 +2,39 @@ package com.codegym.services.product_services_implement;
 
 import com.codegym.model.Product;
 import com.codegym.reponsitory.ProductReponsitory;
-import com.codegym.reponsitory.produc_reponsitory_impl.ProductReponsitoryImplement;
 import com.codegym.services.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class ProductServicesImlement implements ProductService {
-    ProductReponsitory productIml = new ProductReponsitoryImplement();
+    @Autowired
+    ProductReponsitory productReponsitory;
     @Override
-    public List<Product> getAllProducts() {
-        return productIml.getAllProducts();
+    public Iterable<Product> findAll() {
+        return productReponsitory.findAll();
+    }
+
+    @Override
+    public Product findById(Long id) {
+        return productReponsitory.findById(id).orElse(null);
     }
 
     @Override
     public void save(Product product) {
-        productIml.save(product);
+       productReponsitory.save(product);
     }
 
     @Override
-    public void delete(int id) {
-        productIml.delete(id);
+    public void remove(Product product) {
+        productReponsitory.delete(product);
     }
 
     @Override
-    public Product findById(int id) {
-        return productIml.findById(id);
-    }
-
-    @Override
-    public void update(int id, Product product) {
-        productIml.update(id,product);
+    public Product findByIdZ(Long id) {
+        return productReponsitory.findByIdZ(id);
     }
 }
