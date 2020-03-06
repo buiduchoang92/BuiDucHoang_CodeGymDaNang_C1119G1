@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create ContactDetail</title>
+    <style th:insert="layuot::oke"></style>
+</head>
+<body>
+<h1>Create ContactDetail</h1>
+<p>
+    <a th:href="@{/contactdetails}"><h2>List ContastDetail</h2></a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div id="form">
+    <form action="#" th:action="@{/create-contactdetail}" th:object="${contactdetails}" method="post">
+        <table>
+            <tr>
+                <input type="hidden" th:field="*{idContactDetails}"/>
+            </tr>
+            <tr>
+                <td>amountContactDetails</td>
+                <td><input type="text" th:field="*{amountContactDetails}"/></td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td>
+                    <select type="text" th:field="*{contact}">
+                        <option th:value="${row.getIdContact()}" th:each="row : ${con}" th:text="${row.getNameContact()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Parts</td>
+                <td>
+                    <select type="text" th:field="*{accompanyingServices}">
+                        <option th:value="${row.getIdAccompanyingServices()}" th:each="row : ${acc}" th:text="${row.getNameAccompanyingServices()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" style="width: 70px;height: 50px"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

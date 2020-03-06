@@ -14,7 +14,7 @@ public class AccompanyingServices {
     private String nameAccompanyingServices;
     private double priceAccompanyingServices;
     private String statusAccompanyingServices;
-    private int unitAccompanyingServices;
+    private String unitAccompanyingServices;
 
     @OneToMany(mappedBy = "accompanyingServices")
     private List<ContactDetails> contactDetails;
@@ -54,11 +54,11 @@ public class AccompanyingServices {
         this.statusAccompanyingServices = statusAccompanyingServices;
     }
 
-    public int getUnitAccompanyingServices() {
+    public String getUnitAccompanyingServices() {
         return unitAccompanyingServices;
     }
 
-    public void setUnitAccompanyingServices(int unitAccompanyingServices) {
+    public void setUnitAccompanyingServices(String unitAccompanyingServices) {
         this.unitAccompanyingServices = unitAccompanyingServices;
     }
 

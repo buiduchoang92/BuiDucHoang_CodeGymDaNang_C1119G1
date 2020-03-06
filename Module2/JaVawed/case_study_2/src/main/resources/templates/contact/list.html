@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 13px;
+        }
+        tr:nth-child(even) {
+            /*background-color: #dddddd;*/
+        }
+        body {background-color: white;}
+        h1 {color: red;}
+        p {color: blue;}
+        input{size: 50px}
+    </style>
+</head>
+<body>
+<h1>Contact</h1>
+<p>
+    <a th:href="@{/index}"><h2>TrangChu</h2></a>
+</p>
+<p>
+    <a th:href="@{/create-contact}"><h2>Create Contact</h2></a>
+</p>
+<p>
+    <a th:href="@{/view-customer-contact}"><h2>List Customer In Contact</h2></a>
+</p>
+<form>
+    seach Name Contact
+    <input type="text" name="s">
+    <input type="submit" value="seach">
+</form>
+<div th:if="${success}">
+    <span th:text="${success}"></span>
+</div>
+<span th:each="row:${setContact}"
+th:text="${row}"></span>
+<table>
+    <tr>
+        <th>IdContact</th>
+        <th>NameContact</th>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>downPayment</th>
+        <th>totalMoney</th>
+        <th>Employee</th>
+        <th>Services</th>
+        <th>Customer</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="row: ${contacts}">
+        <td th:text="${row.getIdContact()}"></td>
+        <td th:text="${row.getNameContact()}"></td>
+        <td th:text="${#dates.format(row.getStartDate(),'dd/MM/yyyy')}"></td>
+        <td th:text="${#dates.format(row.getEndDate(),'dd/MM/yyyy')}"></td>
+        <td th:text="${row.getDownPayment()}"></td>
+        <td th:text="${row.getTotalMoney()}"></td>
+        <td th:text="${row.getEmployee().getNameEmployee()}"></td>
+        <td th:text="${row.getService().getNameService()}"></td>
+        <td th:text="${row.getCustomer().getNameCustomer()}"></td>
+        <td><a th:href="@{/edit-contact/__${row.idContact}__}">Edit</a></td>
+        <td><a th:href="@{/delete-contact/__${row.idContact}__}">Delete</a></td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{'/contacts'(page=${contacts.number - 1})}" th:if="${contacts.hasPrevious()}">Previous</a>
+    <span th:text="${contacts.number + 1}"></span>/<span th:text="${contacts.totalPages}"></span>
+    <a th:href="@{'/contacts'(page=${contacts.number + 1})}" th:if="${contacts.hasNext()}">Next</a>
+</div>
+</body>
+</html>

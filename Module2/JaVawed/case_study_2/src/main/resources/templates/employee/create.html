@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Customer</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $("#birthdayEm").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+    <style th:insert="layuot::oke"></style>
+</head>
+<body>
+<h1>Create Employee</h1>
+<p>
+    <a th:href="@{/employees}"><h2>List Employee</h2></a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div id="form">
+    <form action="#" th:action="@{/create-employee}" th:object="${employees}" method="post">
+        <table>
+            <tr>
+                <input type="hidden" th:field="*{idEmployee}"/>
+            </tr>
+            <tr>
+                <td>NameEmployee</td>
+                <td><input type="text" th:field="*{nameEmployee}"/></td>
+            </tr>
+            <tr>
+                <td>BirthdayEm</td>
+                <td><input type="text" th:field="*{birthdayEm}"/></td>
+            </tr>
+            <tr>
+                <td>PhoneNumberEmployee</td>
+                <td><input type="text" th:field="*{phoneNumberEmployee}"/></td>
+            </tr>
+            <tr>
+                <td>EmailEmployee</td>
+                <td><input type="text" th:field="*{emailEmployee}"/></td>
+            </tr>
+            <tr>
+                <td>AddressEmployee</td>
+                <td><input type="text" th:field="*{addressEmployee}"/></td>
+            </tr>
+            <tr>
+                <td>IdCardEmployee</td>
+                <td><input type="text" th:field="*{idCardEmployee}"/></td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td><input type="text" th:field="*{salary}"/></td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td>
+                    <select type="text" th:field="*{position}">
+                        <option th:value="${row.getIdPosition()}" th:each="row : ${pos}" th:text="${row.getNamePosition()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Parts</td>
+                <td>
+                    <select type="text" th:field="*{parts}">
+                        <option th:value="${row.getIdParts()}" th:each="row : ${par}" th:text="${row.getNameParts()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Degree</td>
+                <td>
+                    <select type="text" th:field="*{degree}">
+                        <option th:value="${row.getIdDegree()}" th:each="row : ${deg}" th:text="${row.getNameDegree()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" style="width: 70px;height: 50px"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

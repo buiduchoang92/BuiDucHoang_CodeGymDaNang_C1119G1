@@ -45,8 +45,8 @@ public class BlogController {
 
     @PostMapping("/create-blog")
     public ModelAndView saveBlog(@ModelAttribute(name = "blog") Blog blog, @RequestParam(name = "category")long categoryId) {
-        Category category = categoryService.findById(categoryId);
-        blog.setCategory(category);
+            Category category = categoryService.findById(categoryId);
+            blog.setCategory(category);
         blogsevice.save(blog);
         ModelAndView modelAndView = new ModelAndView("blog/create");
         modelAndView.addObject("blog", blog);

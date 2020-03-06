@@ -584,7 +584,9 @@ div.tab button:hover {
     padding: 0.1rem 1rem;
 }
 
-
+.form-inline{
+   right: 300px;
+}
 /* FOOTER
 **************************************/
 

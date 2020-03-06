@@ -1,10 +1,12 @@
 package com.codegym.case_study_2.controllers;
 
 import com.codegym.case_study_2.models.Customer;
+import com.codegym.case_study_2.repositories.TypeOfCustomerRepository;
+import com.codegym.case_study_2.repositories.TypeOfServiceRepository;
 import com.codegym.case_study_2.services.CustomerService;
 import com.codegym.case_study_2.validation.CustomerValidatetion;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.support.PagedListHolder;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -17,34 +19,41 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
 public class CustomerController {
     @Autowired
     CustomerService customerService;
+    @Autowired
+    TypeOfCustomerRepository typeOfCustomerRepository;
 
     @GetMapping("/customers")
-    public ModelAndView listCustomer(Pageable pageable) {
-
-        Page<Customer> customers = customerService.findAll(PageRequest.of(pageable.getPageNumber(),5));
-        return new ModelAndView("customer/list", "customers", customers);
+    public ModelAndView showNameCustomer(@ModelAttribute(name = "s")Optional<String> s,Pageable pageable){
+        Page<Customer> nameCustomer;
+        if (s.isPresent()){
+            nameCustomer = customerService.findByName(s.get(),PageRequest.of(pageable.getPageNumber(),1));
+        }else {
+            nameCustomer = customerService.findAll(PageRequest.of(pageable.getPageNumber(),5));
+        }
+        ModelAndView modelAndView = new ModelAndView("customer/list");
+        modelAndView.addObject("customers",nameCustomer);
+        return modelAndView;
     }
 
     @GetMapping("/create-customer")
     public ModelAndView showCreateCustomer() {
         Customer customer = new Customer();
-        return new ModelAndView("customer/create", "customers",customer);
+        ModelAndView mav = new ModelAndView("customer/create");
+        mav.addObject("customers",customer);
+        mav.addObject("type",typeOfCustomerRepository.findAll());
+        return mav;
     }
 
     @PostMapping("/create-customer")
     public ModelAndView saveCreateCustomer(@Validated @ModelAttribute("customers") Customer customer, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) { ModelAndView modelAndView = new ModelAndView("customer/create");
-        System.out.println("customer"+ customer);
             return modelAndView;
         }else {
             customerService.save(customer);
@@ -71,16 +80,10 @@ public class CustomerController {
     }
 
     @GetMapping("/delete-customer/{id}")
-    public ModelAndView showDeleteCustomer(@PathVariable Long id) {
-        Customer customer = customerService.findById(id);
-        ModelAndView modelAndView = new ModelAndView("customer/delete");
-        modelAndView.addObject("customers", customer);
-        return modelAndView;
+    public String showDeleteCustomer(@PathVariable Long id) {
+       customerService.delete(id);
+        return "redirect:/customers";
     }
 
-    @PostMapping("/delete-customer")
-    public String deleteEditCustomer(@ModelAttribute("customers") Customer customer) {
-        customerService.delete(customer.getIdCustomer());
-        return "redirect:/customer/list";
-    }
+
 }

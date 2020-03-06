@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -46,4 +47,11 @@ public class CustomerServiceImp implements CustomerService {
     public Page<Customer> findByName(String name, Pageable pageable) {
         return customerReponsitory.findByName(name,pageable);
     }
+
+    @Override
+    public Page<Customer> findCustomerByContactList(Pageable pageable) {
+        return customerReponsitory.findCustomerByContactList(pageable);
+    }
+
+
 }

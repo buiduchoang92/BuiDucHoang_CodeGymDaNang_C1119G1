@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Service</title>
+    <style th:insert="layuot::oke"></style>
+</head>
+<body>
+<h1>Edit Service</h1>
+<p>
+    <a th:href="@{/services}"><h2>List Service</h2></a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div id="form">
+    <form action="#" th:action="@{/edit-service}" th:object="${services}" method="post">
+        <table>
+            <tr>
+                <input type="hidden" th:field="*{idService}"/>
+            </tr>
+            <tr>
+                <td>NameService</td>
+                <td><input type="text" th:field="*{nameService}"/></td>
+            </tr>
+            <tr>
+                <td>NumberOfFloor</td>
+                <td><input type="text" th:field="*{numberOfFloor}"/></td>
+            </tr>
+            <tr>
+                <td>Areas</td>
+                <td><input type="text" th:field="*{areas}"/></td>
+            </tr>
+            <tr>
+                <td>MaxAmountPeople</td>
+                <td><input type="text" th:field="*{maxAmountPeople}"/></td>
+            </tr>
+            <tr>
+                <td>PriceService</td>
+                <td><input type="text" th:field="*{priceService}"/></td>
+            </tr>
+
+            <tr>
+                <td>TypeOfService</td>
+                <td>
+                    <select type="text" th:field="*{typeOfService}">
+                        <option th:value="${row.getIdTypeOfService()}" th:each="row : ${type}" th:text="${row.getNameTypeOfService()}"></option>
+                    </select>
+                </td>
+            </tr>
+<!--            <tr>-->
+<!--                <td>TypeOfRent</td>-->
+<!--                <td>-->
+<!--                    <select type="text" th:field="*{typeOfRent}">-->
+<!--                        <option th:value="${row.getIdTypeOfRent()}" th:each="row : ${rent}" th:text="${row.getNameTypeOfRent()}"></option>-->
+<!--                    </select>-->
+<!--                </td>-->
+<!--            </tr>-->
+            <tr>
+                <td>
+                    <input type="submit" value="Save" style="width: 70px;height: 50px"></input>
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+</div>
+</body>
+</html>
+
+
+</body>
+</html>

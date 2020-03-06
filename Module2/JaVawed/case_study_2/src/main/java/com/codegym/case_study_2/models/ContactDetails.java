@@ -8,7 +8,6 @@ public class ContactDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContactDetails;
-
     private int amountContactDetails;
 
 

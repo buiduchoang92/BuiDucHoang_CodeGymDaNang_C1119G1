@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 13px;
+        }
+        tr:nth-child(even) {
+            /*background-color: #dddddd;*/
+        }
+        body {background-color: white;}
+        h1 {color: red;}
+        p {color: blue;}
+        input{size: 50px}
+    </style>
+</head>
+<body>
+<h1>Customers</h1>
+<p>
+    <a th:href="@{/index}"><h2>TrangChu</h2></a>
+</p>
+<p>
+    <a th:href="@{/create-employee}"><h2>Create Employee</h2></a>
+</p>
+
+<form>
+    seach Name Employee
+    <input type="text" name="s">
+    <input type="submit" value="seach">
+</form>
+<table>
+    <tr>
+        <th>IdEmployee</th>
+        <th>NameEmloyee</th>
+        <th>BirthDayEmpoyee</th>
+        <th>phoneNumberEmployee</th>
+        <th>emailEmployee</th>
+        <th>addressEmployee</th>
+        <th>idCardEmployee</th>
+        <th>salary</th>
+        <th>Parts</th>
+        <th>Degree</th>
+        <th>Position</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="row: ${employees}">
+        <td th:text="${row.getIdEmployee()}"></td>
+        <td th:text="${row.getNameEmployee()}"></td>
+        <td th:text="${#dates.format(row.getBirthdayEm(), 'dd/MM/yyyy')}"></td>
+        <td th:text="${row.getPhoneNumberEmployee()}"></td>
+        <td th:text="${row.getEmailEmployee()}"></td>
+        <td th:text="${row.getAddressEmployee()}"></td>
+        <td th:text="${row.getIdCardEmployee()}"></td>
+        <td th:text="${row.getSalary()}"></td>
+        <td th:text="${row.getParts().getNameParts()}"></td>
+        <td th:text="${row.getDegree().getNameDegree()}"></td>
+        <td th:text="${row.getPosition().getNamePosition()}"></td>
+        <td><a th:href="@{/edit-customer/__${row.idEmployee}__}">Edit</a></td>
+        <td><a th:href="@{/delete-customer/__${row.idEmployee}__}">Delete</a></td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{'/employees'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
+    <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
+    <a th:href="@{'/employees'(page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
+</div>
+</body>
+</html>

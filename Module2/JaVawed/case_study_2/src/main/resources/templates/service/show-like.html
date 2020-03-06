@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,th {
+        border: 1px solid black;
+        text-align: left;
+        padding: 13px;
+    }
+    tr:nth-child(even) {
+        /*background-color: #dddddd;*/
+    }
+    body {background-color: white;}
+    h1 {color: red;}
+    p {color: blue;}
+    input{size: 50px}
+</style>
+<h1>Show Like</h1>
+<a href="/services">Service List</a>
+<body>
+<table>
+    <tr>
+        <th>idService</th>
+        <th>nameService</th>
+        <th>numberOfFloor</th>
+        <th>areas</th>
+        <th>maxAmountPeople</th>
+        <th>priceService</th>
+        <th>TypeOfService</th>
+        <th>TypeOfRent</th>
+    </tr>
+    <tr th:each="row: ${like}">
+        <td th:text="${row.idService}"></td>
+        <td th:text="${row.nameService}"></td>
+        <td th:text="${row.numberOfFloor}"></td>
+        <td th:text="${row.areas}"></td>
+        <td th:text="${row.maxAmountPeople}"></td>
+        <td th:text="${row.priceService}"></td>
+        <td th:text="${row.typeOfService.getNameTypeOfService()}"></td>
+        <td th:text="${row.typeOfRent.getNameTypeOfRent()}"></td>
+    </tr>
+</table>
+</body>
+</html>

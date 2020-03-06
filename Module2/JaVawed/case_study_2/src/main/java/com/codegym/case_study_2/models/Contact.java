@@ -1,7 +1,10 @@
 package com.codegym.case_study_2.models;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -12,8 +15,10 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContact;
     private String nameContact;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
+    private Date startDate;
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
+    private Date endDate;
     private double downPayment;
 
     public Contact() {
@@ -21,13 +26,29 @@ public class Contact {
 
     private double totalMoney;
 
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     @ManyToOne
     @JoinColumn(name = "afk_employee_contact")
-    private Employee employeeId;
+    private Employee employee;
 
     @ManyToOne
     @JoinColumn(name = "afk_service_contact")
-    private Service service;
+    private Services service;
 
     public Long getIdContact() {
         return idContact;
@@ -56,19 +77,19 @@ public class Contact {
         this.nameContact = nameContact;
     }
 
-    public LocalDate getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
@@ -88,32 +109,18 @@ public class Contact {
         this.totalMoney = totalMoney;
     }
 
-    public Employee getEmployeeId() {
-        return employeeId;
-    }
 
-    public void setEmployeeId(Employee employeeId) {
-        this.employeeId = employeeId;
-    }
 
-    public Service getService() {
+    public Services getService() {
         return service;
     }
 
-    public void setService(Service service) {
+    public void setService(Services service) {
         this.service = service;
     }
     @ManyToOne
     @JoinColumn(name = "afk_contact_customer")
-    private Customer customerC;
-
-    public Customer getCustomer() {
-        return customerC;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customerC = customer;
-    }
+    private Customer customer;
 
 
 }

@@ -1,6 +1,8 @@
 package com.codegym.case_study_2.models;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 
@@ -17,9 +19,11 @@ public class Customer  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCustomer;
     private String nameCustomer;
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date birthdayCustomer;
-    @Pattern(regexp = "^((090|091)[\\d]{7})|(\\(84\\)\\+(09|91)[\\d]{7})$",message = "phone khong dung dinh dang")
+    @Pattern(regexp = "^((090|091)[\\d]{7})|(\\(84\\)(09|91)[\\d]{7})$",message = "phone khong dung dinh dang")
     private String phoneNumberCustomer;
+    @Pattern(regexp = "^(([\\w][\\S]{5,15})\\@{1}(gmail.com){1})$",message = "email phai dung dinh dang '5-15 ki tu lien nhau + @gmail.com'")
     private String emailCustomer;
     private String addressCustomer;
     public Long getIdCustomer() {
@@ -42,8 +46,13 @@ public class Customer  {
         return birthdayCustomer;
     }
 
-    public void setBirthdayCustomer(String birthdayCustomer) throws ParseException {
-        this.birthdayCustomer = new SimpleDateFormat("dd/MM/yyyy").parse(birthdayCustomer);
+//    public void setBirthdayCustomer(String birthdayCustomer) throws ParseException {
+//        this.birthdayCustomer = new SimpleDateFormat("dd/MM/yyyy").parse(birthdayCustomer);
+//    }
+
+
+    public void setBirthdayCustomer(Date birthdayCustomer) {
+        this.birthdayCustomer = birthdayCustomer;
     }
 
     public String getPhoneNumberCustomer() {
@@ -83,9 +92,10 @@ public class Customer  {
 
     @ManyToOne
     @JoinColumn(name = "afk_typeOfCustomer")
+
     private TypeOfCustomer typeOfCustomer;
 
-    @OneToMany(mappedBy = "customerC",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     private List<Contact> contactList;
 
     public List<Contact> getContactList() {

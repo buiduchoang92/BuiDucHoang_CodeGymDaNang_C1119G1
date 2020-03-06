@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "service_f")
-public class Service {
+public class Services {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idService;
@@ -79,7 +79,7 @@ public class Service {
         this.typeOfService = typeOfService;
     }
 
-    public Service() {
+    public Services() {
     }
 
     private String status;

@@ -20,4 +20,5 @@ public interface ContactReponsitory extends JpaRepository<Contact,Long> {
 
     @Query("select c from Contact c where c.nameContact like  ?1%")
     Page<Contact> findByName(String name, Pageable pageable);
+
 }

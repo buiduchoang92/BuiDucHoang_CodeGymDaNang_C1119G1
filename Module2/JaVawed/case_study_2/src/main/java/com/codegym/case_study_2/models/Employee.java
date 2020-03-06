@@ -1,7 +1,10 @@
 package com.codegym.case_study_2.models;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -13,7 +16,8 @@ public class Employee {
     private Long idEmployee;
 
     private String nameEmployee;
-    private LocalDate birthdayEm;
+    @DateTimeFormat(pattern = "dd/mm/yyyy")
+    private Date birthdayEm;
     private String idCardEmployee;
     private double salary;
     private String emailEmployee;
@@ -37,11 +41,11 @@ public class Employee {
         this.nameEmployee = nameEmployee;
     }
 
-    public LocalDate getBirthdayEm() {
+    public Date getBirthdayEm() {
         return birthdayEm;
     }
 
-    public void setBirthdayEm(LocalDate birthdayEm) {
+    public void setBirthdayEm(Date birthdayEm) {
         this.birthdayEm = birthdayEm;
     }
 
@@ -108,7 +112,7 @@ public class Employee {
     @JoinColumn(name = "afk_degree")
     private Degree degree;
 
-    @OneToMany(mappedBy = "employeeId",cascade =CascadeType.ALL )
+    @OneToMany(mappedBy = "employee",cascade =CascadeType.ALL )
     private List<Contact> contactList;
 
     public Parts getParts() {

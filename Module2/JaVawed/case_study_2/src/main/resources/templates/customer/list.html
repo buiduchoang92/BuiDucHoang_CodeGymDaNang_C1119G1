@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<!--<head th:replace="layout :: head"></head>-->
+
 <head>
     <style>
         table {
@@ -17,7 +17,7 @@
         tr:nth-child(even) {
             /*background-color: #dddddd;*/
         }
-        body {background-color: powderblue;}
+        body {background-color: white;}
         h1 {color: red;}
         p {color: blue;}
         input{size: 50px}
@@ -31,6 +31,12 @@
 <p>
     <a th:href="@{/create-customer}"><h2>Create Customer</h2></a>
 </p>
+
+<form>
+    seach Name Customer
+    <input type="text" name="s">
+    <input type="submit" value="seach">
+</form>
 <table>
     <tr>
         <th>IdCusTomer</th>
@@ -46,11 +52,11 @@
     <tr th:each="row: ${customers}">
         <td th:text="${row.getIdCustomer()}"></td>
         <td th:text="${row.getNameCustomer()}"></td>
-        <td th:text="${row.getBirthdayCustomer()}"></td>
+        <td th:text="${#dates.format(row.getBirthdayCustomer(), 'dd/MM/yyyy')}"></td>
         <td th:text="${row.getPhoneNumberCustomer()}"></td>
         <td th:text="${row.getEmailCustomer()}"></td>
         <td th:text="${row.getAddressCustomer()}"></td>
-        <td th:text="${row.getTypeOfCustomer()}"></td>
+        <td th:text="${row.getTypeOfCustomer().getNameTypeOfCustomer()}"></td>
         <td><a th:href="@{/edit-customer/__${row.idCustomer}__}">Edit</a></td>
         <td><a th:href="@{/delete-customer/__${row.idCustomer}__}">Delete</a></td>
     </tr>
@@ -60,6 +66,5 @@
     <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
     <a th:href="@{'/customers'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
 </div>
-<!--<footer th:replace="layout :: footer"></footer>-->
 </body>
 </html>

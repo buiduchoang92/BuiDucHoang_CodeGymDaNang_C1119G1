@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Customer</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $("#startDate").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
+            $("#endDate").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
+        });
+    </script>
+    <style th:insert="layuot::oke"></style>
+</head>
+<body>
+<h1>Create Customer</h1>
+<p>
+    <a th:href="@{/contacts}"><h2>List Contact</h2></a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<div id="form">
+    <form action="#" th:action="@{/create-contact}" th:object="${contacts}" method="post">
+        <table>
+            <tr>
+                <input type="hidden" th:field="*{idContact}"/>
+            </tr>
+            <tr>
+                <td>NameContact</td>
+                <td><input type="text"  th:field="*{nameContact}"/></td>
+            </tr>
+            <tr>
+                <td>startDate</td>
+                <td><input type="text" th:field="*{startDate}"/></td>
+            </tr>
+            <tr>
+                <td>endDate</td>
+                <td><input type="text" th:field="*{endDate}"/></td>
+            </tr>
+            <tr>
+                <td>downPayment</td>
+                <td><input type="text" th:field="*{downPayment}"/></td>
+            </tr>
+            <tr>
+                <td>totalMoney</td>
+                <td><input type="text" th:field="*{totalMoney}"/></td>
+            </tr>
+            <tr>
+               <td>NameCustomer</td>
+                <td>
+                    <select type="text" th:field="*{customer}">
+                        <option th:value="${row.getIdCustomer()}" th:each="row : ${cus}" th:text="${row.getNameCustomer()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>NameService</td>
+                <td>
+                    <select type="text" th:field="*{service}">
+                        <option th:value="${row.getIdService()}" th:each="row : ${ser}" th:text="${row.getNameService()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>NameEmployee</td>
+                <td>
+                    <select type="text" th:field="*{employee}">
+                        <option th:value="${row.getIdEmployee()}" th:each="row : ${em}" th:text="${row.getNameEmployee()}"></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Save" style="width: 70px;height: 50px"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
