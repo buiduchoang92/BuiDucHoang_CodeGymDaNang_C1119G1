@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.Optional;
 
 @Controller
@@ -53,6 +54,7 @@ public class CustomerController {
 
     @PostMapping("/create-customer")
     public ModelAndView saveCreateCustomer(@Validated @ModelAttribute("customers") Customer customer, BindingResult bindingResult) {
+        new CustomerValidatetion().validate(customer,bindingResult);
         if (bindingResult.hasErrors()) { ModelAndView modelAndView = new ModelAndView("customer/create");
             return modelAndView;
         }else {

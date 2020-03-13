@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,th {
+            border: 1px solid black;
+            text-align: left;
+            padding: 13px;
+        }
+        tr:nth-child(even) {
+            /*background-color: #dddddd;*/
+        }
+        body {background-color: white;}
+        h1 {color: red;}
+        p {color: blue;}
+        input{size: 50px}
+    </style>
+</head>
+<body>
+<h3>DanhSach MatHang</h3>
+<p>
+    <a th:href="@{/create-mathang}">
+        Add new MatHang
+    </a>
+</p>
+
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<form th:action="@{/mathangs}" method="get">
+    seach Name MatHang
+    <input type="text" name="s">
+    <input type="submit" value="seach">
+</form>
+<table>
+    <tr>
+        <th>MaHang</th>
+        <th>TenHang</th>
+        <th>LoaiHang</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="row : ${mathangs}">
+        <td th:text="${row.id}"></td>
+        <td th:text="${row.tenHang}"></td>
+        <td th:text="${row.loaiHang.getTenLoaiHang()}"></td>
+        <td><a th:href="@{/edit-mathang/__${row.id}__ }">Edit</a></td>
+        <td><a th:href="@{/delete-mathang/__${row.id}__ }">Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>

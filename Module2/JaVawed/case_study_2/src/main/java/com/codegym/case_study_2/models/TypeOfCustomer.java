@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "type_of_customer_f")
-public class TypeOfCustomer {
+public class    TypeOfCustomer {
     public Long getIdTypeOfCustomer() {
         return idTypeOfCustomer;
     }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style th:insert="layuot::oke"></style>
+</head>
+<body>
+<h3>Them MatHang</h3>
+<p>
+    <a th:href="@{/mathangs}">
+        Tro Ve Danh Sach Mat Hang
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/create-mathang}" th:object="${mathang}" method="POST">
+        <table>
+            <tr>
+                <input type="hidden" th:field="*{id}"/>
+            </tr>
+            <tr>
+                <td>TenMatHang</td>
+                <td><input type="text"  th:field="*{tenHang}"/></td>
+            </tr>
+            <tr>
+                <td>Gia</td>
+                <td><input type="text" th:field="*{gia}"/></td>
+            </tr>
+            <tr>
+                <td>SoLuong</td>
+                <td><input type="text" th:field="*{soLuong}"/></td>
+            </tr>
+            <tr>
+                <td>MoTa</td>
+                <td><input type="text" th:field="*{moTa}"/></td>
+            </tr>
+            <tr>
+                <td>LoaiHang</td>
+                <td><select th:field="*{loaiHang}">
+                    <option th:value="${row.getIdLoaiHang()}" th:each="row : ${loai}" th:text="${row.getTenLoaiHang()}"></option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Nhat Mat Hang" style="width: 150px;height: 50px"></input>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

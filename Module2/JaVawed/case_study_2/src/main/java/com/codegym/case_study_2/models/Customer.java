@@ -18,14 +18,20 @@ public class Customer  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCustomer;
+
     private String nameCustomer;
-    @DateTimeFormat(pattern = "dd/mm/yyyy")
+
+//    @DateTimeFormat(pattern = "dd/mm/yyyy")
     private Date birthdayCustomer;
+
     @Pattern(regexp = "^((090|091)[\\d]{7})|(\\(84\\)(09|91)[\\d]{7})$",message = "phone khong dung dinh dang")
     private String phoneNumberCustomer;
+
     @Pattern(regexp = "^(([\\w][\\S]{5,15})\\@{1}(gmail.com){1})$",message = "email phai dung dinh dang '5-15 ki tu lien nhau + @gmail.com'")
     private String emailCustomer;
+
     private String addressCustomer;
+
     public Long getIdCustomer() {
         return idCustomer;
     }
@@ -42,8 +48,9 @@ public class Customer  {
         this.nameCustomer = nameCustomer;
     }
 
-    public Date getBirthdayCustomer() {
-        return birthdayCustomer;
+    public String  getBirthdayCustomer() {
+        if(this.birthdayCustomer==null) return "";
+        return new SimpleDateFormat("MM-dd-yyyy").format(this.birthdayCustomer);
     }
 
 //    public void setBirthdayCustomer(String birthdayCustomer) throws ParseException {
@@ -51,8 +58,14 @@ public class Customer  {
 //    }
 
 
-    public void setBirthdayCustomer(Date birthdayCustomer) {
-        this.birthdayCustomer = birthdayCustomer;
+    public void setBirthdayCustomer(String birthdayCustomer) {
+        try{
+            this.birthdayCustomer=new SimpleDateFormat("MM-dd-yyyy").parse(birthdayCustomer);
+        }
+        catch (ParseException e){
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"+birthdayCustomer);
+            this.birthdayCustomer=null;
+        }
     }
 
     public String getPhoneNumberCustomer() {

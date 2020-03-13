@@ -9,4 +9,4 @@ import org.springframework.data.jpa.repository.Query;
 public interface ProductReponsitory extends JpaRepository<Product ,Long> {
     @Query("select c from Product c where c.id=?1")
     Product findByIdZ(Long id);
-}
+            }
