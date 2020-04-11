@@ -1,0 +1,136 @@
+
+<div class="row d-flex justify-content-center">
+  <h3>Thêm Mới Một Nhân Viên</h3>
+</div>
+<div class="row mt-4 justify-content-center">
+  <form class="w-75" [formGroup]="formAddNewEmployee">
+    <div class="form-group ">
+      <p><strong>Employee Name</strong></p>
+      <input type="text" class="form-control" formControlName="fullName">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('fullName').invalid&&
+      formAddNewEmployee.get('fullName').touched">
+        <span *ngIf="formAddNewEmployee.get('fullName').invalid&&formAddNewEmployee.get('fullName')
+        .getError('required')">
+          fullName is required</span>
+        <span *ngIf="formAddNewEmployee.get('fullName').invalid&&formAddNewEmployee.get('fullName')
+        .getError('minlength')">
+          fullName is length > 5</span>
+      </div>
+    </div>
+    <div class="form-group ">
+      <p><strong>Position</strong></p>
+      <input type="text" class="form-control" formControlName="position">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('position').invalid&&
+        formAddNewEmployee.get('position').touched">
+        <span *ngIf="formAddNewEmployee.get('position').invalid&&formAddNewEmployee.get('position')
+        .getError('required')">
+          Position is required</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>Part</strong></p>
+      <input type="text" class="form-control" formControlName="part">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('position').invalid&&
+        formAddNewEmployee.get('position').touched">
+        <span *ngIf="formAddNewEmployee.get('position').invalid&&formAddNewEmployee.get('position')
+        .getError('required')">
+          Position is required</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>Level</strong></p>
+      <input type="text" class="form-control" formControlName="level">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('level').invalid&&
+        formAddNewEmployee.get('level').touched">
+        <span *ngIf="formAddNewEmployee.get('level').invalid&&formAddNewEmployee.get('level')
+        .getError('required')">
+          Level is required</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>BirthDay</strong></p>
+        <input type="text" class="form-control" formControlName="birthday" id='datetimepicker1'>
+<!--        <span class="input-group-addon">-->
+<!--          <span class="glyphicon glyphicon-calendar"></span>-->
+<!--        </span>-->
+    </div>
+    <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('position').invalid&&
+        formAddNewEmployee.get('position').touched">
+        <span *ngIf="formAddNewEmployee.get('position').invalid&&formAddNewEmployee.get('position')
+        .getError('required')">
+          BirthDay is required</span>
+    </div>
+    <div class="form-group">
+      <p><strong>IDCard</strong></p>
+      <input type="text" class="form-control" formControlName="idCart">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('idCart').invalid&&
+        formAddNewEmployee.get('idCart').touched">
+        <span *ngIf="formAddNewEmployee.get('idCart').invalid&&formAddNewEmployee.get('idCart')
+        .getError('required')">
+          IDCart is required</span>
+        <span *ngIf="formAddNewEmployee.get('idCart').invalid&&formAddNewEmployee.get('idCart')
+        .getError('pattern')">
+          IDCart is Malformed</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>Salary</strong></p>
+      <input type="text" class="form-control" formControlName="salary">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('salary').invalid&&
+        formAddNewEmployee.get('salary').touched">
+        <span *ngIf="formAddNewEmployee.get('salary').invalid&&formAddNewEmployee.get('salary')
+        .getError('required')">
+          Salary is required</span>
+        <span *ngIf="formAddNewEmployee.get('salary').invalid&&formAddNewEmployee.get('salary')
+        .getError('pattern')">
+          Salary is Malformed</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>Phone</strong></p>
+      <input type="text" class="form-control" formControlName="phone">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('phone').invalid&&
+        formAddNewEmployee.get('phone').touched">
+        <span *ngIf="formAddNewEmployee.get('phone').invalid&&formAddNewEmployee.get('phone')
+        .getError('required')">
+          Phone is required</span>
+        <span *ngIf="formAddNewEmployee.get('phone').invalid&&formAddNewEmployee.get('phone')
+        .getError('pattern')">
+          Phone is Malformed</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>Email</strong></p>
+      <input type="text" class="form-control" formControlName="email">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('email').invalid&&
+        formAddNewEmployee.get('email').touched">
+        <span *ngIf="formAddNewEmployee.get('email').invalid&&formAddNewEmployee.get('email')
+        .getError('required')">
+          Email is required</span>
+        <span *ngIf="formAddNewEmployee.get('email').invalid&&formAddNewEmployee.get('email')
+        .getError('email')">
+          Email is Malformed</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p><strong>Address</strong></p>
+      <input type="text" class="form-control" formControlName="address">
+      <div class="alert alert-danger" *ngIf="formAddNewEmployee.get('address').invalid&&
+        formAddNewEmployee.get('address').touched">
+        <span *ngIf="formAddNewEmployee.get('address').invalid&&formAddNewEmployee.get('address')
+        .getError('required')">
+          Address is required</span>
+      </div>
+    </div>
+  </form>
+
+</div>
+<div class="row mt-4 d-flex justify-content-center">
+  <button [disabled]="formAddNewEmployee.invalid" class="btn btn-success" (click)="addNewEmployee()">Add New</button>
+</div>
+
+<script type="text/javascript">
+  $(function () {
+    $('#datetimepicker1').datepicker();
+  });
+</script>

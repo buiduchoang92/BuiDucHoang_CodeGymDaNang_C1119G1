@@ -7,10 +7,42 @@ import {YoutubePlayerComponent} from './youtube-player/youtube-player.component'
 
 const routes: Routes = [
   {
-    path: 'youtube', component: YoutubePlaylistComponent,
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'dictionary',
+    component: DictionaryPageComponent,
+    children: [
+      {
+        path: ':key',
+        component: DictionaryDetailComponent,
+        canActivate: [AuthGuard]
+      }
+    ]
+  },
+  {
+    path: 'blog',
+    loadChildren: './blog/blog.module#BlogModule'
+  }, {
+    path: 'timelines',
+    component: TimelinesComponent
+  },
+  {
+    path: 'youtube',
+    component: YoutubePlaylistComponent,
     children: [{
-      path: ':id', component: YoutubePlayerComponent
+      path: ':id',
+      component: YoutubePlayerComponent
     }]
+  },
+  {
+    path: 'login-step-1',
+    component: LoginStep1Component
+  },
+  {
+    path: 'login-step-2',
+    component: LoginStep2Component
   }
 ];
 

@@ -1,0 +1,109 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullName": "Bùi Đức Hoàng",
+      "position": "Giám Đốc",
+      "part": "Bán hàng",
+      "level": "Dai Hoc",
+      "birthday": "25/10/1992",
+      "idCart": 123456789,
+      "salary": "mười triệu",
+      "phone": "0816504123",
+      "email": "hoang92duc@gmail.com",
+      "addres": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "fullName": "Lư Văn Đại",
+      "position": "Giám Đốc",
+      "part": "Bán hàng",
+      "level": "Dai Hoc",
+      "birthday": "25/10/1992",
+      "idCart": 123456789,
+      "salary": "mười triệu",
+      "phone": "0816504123",
+      "email": "hoang92duc@gmail.com",
+      "addres": "Đà Nẵng"
+    },
+    {
+      "id": 3,
+      "fullName": "Châu Văn Súng",
+      "position": "Giám Đốc",
+      "part": "Bán hàng",
+      "level": "Dai Hoc",
+      "birthday": "25/10/1992",
+      "idCart": 123456789,
+      "salary": "mười triệu",
+      "phone": "0816504123",
+      "email": "hoang92duc@gmail.com",
+      "addres": "Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "fullName": "ư",
+      "position": "ư",
+      "part": "q",
+      "level": "q",
+      "birthday": "e",
+      "idCart": "ư",
+      "salary": "q",
+      "phone": "a",
+      "email": "s",
+      "addres": "a"
+    },
+    {
+      "id": 14,
+      "fullName": "dsd",
+      "position": "dsa",
+      "part": "sad",
+      "level": "",
+      "birthday": "sssds",
+      "idCart": "sss",
+      "salary": "aa",
+      "phone": "sss",
+      "email": "sss",
+      "address": "sss"
+    },
+    {
+      "id": 15,
+      "fullName": "sdfghj",
+      "position": "sa",
+      "part": "sssss",
+      "level": "sss",
+      "birthday": "sss",
+      "idCart": "098765432",
+      "salary": "10000000",
+      "phone": "0902222222",
+      "email": "hoang92duc@gmail.com",
+      "address": "dsadsadada"
+    },
+    {
+      "id": 16,
+      "fullName": "wqeqweq",
+      "position": "wwww",
+      "part": "www",
+      "level": "www",
+      "birthday": "wwwww",
+      "idCart": "987654321",
+      "salary": "234567",
+      "phone": "0902222222",
+      "email": "hoang92duc@gmail.com",
+      "address": "dsadas"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "fullName": "Tống Nghĩa",
+      "phone": "987654321",
+      "address": "Quảng Ngãi"
+    },
+    {
+      "id": 2,
+      "fullName": "Công Minh",
+      "phone": "987654321",
+      "address": "Quảng Ngãi"
+    }
+  ]
+}

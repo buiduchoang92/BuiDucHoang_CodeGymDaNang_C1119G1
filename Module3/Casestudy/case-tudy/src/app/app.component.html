@@ -1,0 +1,45 @@
+<div class="container-fluid px-0"  style="height: 100vh">
+  <!--nav-->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!--menu chính-->
+  <div class="row" style="height: 90%">
+    <div class="rowleft col-2 px-0">
+      <div class="list-group">
+        <a href="#" class="list-group-item " [routerLink]="['']">Home</a>
+        <a href="#" class="list-group-item" [routerLink]="['/employee-list']">Quản Lý Nhân Viên</a>
+        <a href="#" class="list-group-item" >Quản Lý Dịch Vụ</a>
+        <a href="#" class="list-group-item">Quản Lý Khách Hàng</a>
+        <a href="#" class="list-group-item">Quản Lý Hợp Đồng</a>
+        <a href="#" class="list-group-item">Quản Lý HD Chi Tiết</a>
+      </div>
+    </div>
+    <div class="rowleft col-10 p-5">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

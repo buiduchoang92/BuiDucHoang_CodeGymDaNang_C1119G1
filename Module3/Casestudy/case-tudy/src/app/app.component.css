@@ -1,0 +1,19 @@
+.rowleft.col-2{
+  border: 1px solid green;
+  border-radius: 5px;
+}
+.list-group-item{
+  background-color: green;
+  color: white;
+}
+/*.list-group-item.active {*/
+/*  background-color: #555;*/
+/*  color: white;*/
+/*  border: 1px solid #555;*/
+/*}*/
+.list-group a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+}
+
